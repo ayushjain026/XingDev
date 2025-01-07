@@ -1,0 +1,76 @@
+@use '_variables' as var
+.hero
+  width: 100%
+  height: 81rem
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  padding: 0 12rem
+  background-image: linear-gradient(to right, var.$pri-text-color 40%, var.$pri-color)
+  &-heading
+    @include var.H1()
+    color: var.$bg-color
+    max-width: 56rem
+  &-ctas
+    display: flex
+    margin-top: 4rem
+    margin-bottom: 8rem
+    align-items: center
+    gap: 4rem
+    // cta primary have same styling as 'nav-cta'
+  &-cta-sec
+    color: var.$pri-color
+    @include var.text-m($weight: 600)
+    border: 1px solid transparent
+    padding: 0.8rem 1.2rem
+    border-radius: 0.4rem
+    transition: all 0.4s ease
+    &:hover
+      border: 1px solid var.$pri-color
+      transform: translateY(-2px)
+      color: var.$white
+  &-stats
+    display: flex
+    align-items: center
+    gap: 6.4rem
+    &-num
+      @include var.H2()
+      color: #C0C0CE
+    &-des
+      @include var.text-m($weight: 600)
+      color: #767693
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1rem 12rem
+  background-color: var.$white
+  position: fixed
+  z-index: 2
+  width: 100%
+  top: 0
+  left: 0
+  &-logo
+    height: 3.2rem
+  &-links
+    display: flex
+    gap: 4.8rem
+    &-link
+      @include var.text-m($weight: 600)
+      color: var.$sec-text-color
+      padding: 0.4rem 2rem
+      border-radius: 100px
+      transition: all 0.4s ease
+      &:hover
+        background-color: var.$pri-color
+        color: var.$white
+        transform: translateY(-2px)
+        @include var.btn-shadow()
+  &-cta
+    @include var.pri-cta()
+    @include var.text-m($weight: 600)
+    transition: all 0.4s ease
+    &:hover
+      transform: translateY(-2px)
+      @include var.btn-shadow()

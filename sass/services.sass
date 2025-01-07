@@ -1,0 +1,47 @@
+@use '_variables' as var
+.services
+  &-heading
+    @include var.H2()
+    color: var.$pri-text-color
+    margin-bottom: 6.4rem
+    text-align: center
+  &-cards
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 4.8rem
+    &-card
+      width: 38.4rem
+      border-radius: 0.8rem
+      overflow: hidden
+      background-color: var.$white
+      transition: all 0.4s ease
+      &:hover
+        @include var.card-shadow()
+        transform: translateY(-8px)
+
+      &-img
+        width: 100%
+        height: 19.2rem
+        background-color: var.$pri-text-color
+      &-content
+        padding: 2.4rem
+        width: 100%
+        &-heading
+          @include var.H4()
+          color: var.$sec-text-color
+        &-des
+          @include var.text-m($weight: 400)
+          color: var.$tri-text-color
+          margin-top: 0.8rem
+          margin-bottom: 4rem
+        &-cutoutprice
+          @include var.text-l($weight: 700)
+          color: var.$qut-text-color
+          text-decoration: line-through
+        &-currentprice
+          @include var.H4()
+          color: var.$pri-color
+          margin-bottom: 2.4rem
+          // cta styling same as nav
