@@ -1,6 +1,24 @@
+@use '_variables' as var
 .carousel
-  background-image: url('../Assets/3.jpg')
+  position: relative
   width: 100%
   height: 81rem
-  background-position: center
-  background-size: cover
+  overflow: hidden
+  &-container
+    display: flex
+    width: 400%
+    animation: slide 12s infinite
+  &-img
+    width: 100%
+    height: 81rem
+    object-fit: cover
+
+@keyframes slide
+  0%, 25%
+    transform: translateX(0)
+  30%, 50%
+    transform: translateX(-25%)
+  55%, 75%
+    transform: translateX(-50%)
+  80%, 100%
+    transform: translate(-75%)

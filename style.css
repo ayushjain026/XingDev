@@ -29,11 +29,20 @@ a, a:visited, a:link {
 .hero {
   width: 100%;
   height: 81rem;
+  overflow: hidden;
+  position: relative;
+}
+.hero-content-container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   padding: 0 12rem;
-  background-image: linear-gradient(to right, #111118 40%, #F63194);
+  background-image: linear-gradient(to right, #111118 10%, rgba(17, 17, 24, 0.1254901961));
 }
 .hero-heading {
   font-size: 5.6rem;
@@ -99,7 +108,7 @@ a, a:visited, a:link {
 }
 .nav-links {
   display: flex;
-  gap: 4.8rem;
+  gap: 3.2rem;
 }
 .nav-links-link {
   font-size: 1.4rem;
@@ -198,13 +207,36 @@ a, a:visited, a:link {
 }
 
 .carousel {
-  background-image: url("../Assets/3.jpg");
+  position: relative;
   width: 100%;
   height: 81rem;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+}
+.carousel-container {
+  display: flex;
+  width: 400%;
+  animation: slide 12s infinite;
+}
+.carousel-img {
+  width: 100%;
+  height: 81rem;
+  object-fit: cover;
 }
 
+@keyframes slide {
+  0%, 25% {
+    transform: translateX(0);
+  }
+  30%, 50% {
+    transform: translateX(-25%);
+  }
+  55%, 75% {
+    transform: translateX(-50%);
+  }
+  80%, 100% {
+    transform: translate(-75%);
+  }
+}
 .reviews {
   padding: 12rem 0;
   background-color: #F3F3F7;
@@ -252,6 +284,7 @@ a, a:visited, a:link {
   display: flex;
   gap: 2.4rem;
   align-items: center;
+  animation: scroll 40s linear infinite;
 }
 .reviews-cards-card {
   display: flex;
@@ -318,6 +351,104 @@ a, a:visited, a:link {
 }
 .help {
   text-align: center;
+}
+
+.offers {
+  padding: 12rem 0;
+  background-color: #F3F3F7;
+}
+.offers-tag {
+  background-color: #F63194;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  padding: 0.8rem;
+  color: #FFFFFF;
+  border-bottom-left-radius: 0.4rem;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.offers-heading {
+  font-size: 3.6rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: #111118;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+.offers-subheading {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: #515167;
+  width: 70%;
+  margin: 0 auto 6.4rem;
+  text-align: center;
+}
+.offers-cards {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+.offers-cards-card {
+  position: relative;
+  width: 38.4rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  transition: all 0.4s ease;
+}
+.offers-cards-card-tag {
+  background-color: #F63194;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  color: #FFFFFF;
+  border-bottom-left-radius: 0.4rem;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.offers-cards-card:hover {
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+.offers-cards-card-img {
+  width: 100%;
+  height: 28.4rem;
+  background-color: #111118;
+}
+.offers-cards-card-content {
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+  text-align: center;
+}
+.offers-cards-card-content-heading {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+  color: #2F2F3C;
+  margin-bottom: 2.4rem;
+}
+.offers-cards-card-content-cutoutprice {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: #8D8DA5;
+  text-decoration: line-through;
+}
+.offers-cards-card-content-currentprice {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+  color: #F63194;
+  margin-bottom: 3.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
