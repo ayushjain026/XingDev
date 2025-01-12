@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "DM Sans", sans-serif;
+  background-color: #F3F3F7;
 }
 
 a, a:visited, a:link {
@@ -26,6 +27,11 @@ a, a:visited, a:link {
   color: #F63194;
 }
 
+@media screen and (max-width: 430px) {
+  .section {
+    padding: 12rem 1.6rem;
+  }
+}
 .hero {
   width: 100%;
   height: 81rem;
@@ -57,6 +63,22 @@ a, a:visited, a:link {
   margin-bottom: 8rem;
   align-items: center;
   gap: 4rem;
+}
+.hero-cta {
+  padding: 0.8rem 1.2rem;
+  background-color: #F63194;
+  color: #FFFFFF;
+  border-radius: 0.4rem;
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 .hero-cta-sec {
   color: #F63194;
@@ -142,6 +164,37 @@ a, a:visited, a:link {
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 430px) {
+  .hero-content-container {
+    padding: 2rem 1.6rem;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #111118 10%, rgba(17, 17, 24, 0.5019607843));
+  }
+  .hero-heading {
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
+  .hero-ctas {
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .hero-cta {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: flex-start;
+  }
+  .nav {
+    padding: 2rem 1.6rem;
+  }
+  .nav-links, .nav-cta {
+    display: none;
+  }
+}
 .services-heading {
   font-size: 3.6rem;
   line-height: 4rem;
@@ -206,6 +259,15 @@ a, a:visited, a:link {
   margin-bottom: 2.4rem;
 }
 
+@media screen and (max-width: 430px) {
+  .services-cards {
+    flex-direction: column;
+  }
+  .services-cards-card {
+    max-width: 35.8rem;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  }
+}
 .carousel {
   position: relative;
   width: 100%;
@@ -449,6 +511,124 @@ a, a:visited, a:link {
   font-weight: 600;
   color: #F63194;
   margin-bottom: 3.2rem;
+}
+
+@media screen and (max-width: 430px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+  .contact-location {
+    display: flex;
+    padding: 0.8rem;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  .contact-location-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.8rem;
+    border: 1px solid #8D8DA5;
+  }
+  .contact-location-address {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: #515167;
+  }
+  .contact-location-map {
+    border-radius: 1.6rem;
+    width: 100%;
+    object-fit: fill;
+    margin-top: 0.8rem;
+  }
+  .contact-cta {
+    padding: 0.8rem 1.2rem;
+    background-color: #F63194;
+    color: #FFFFFF;
+    border-radius: 0.4rem;
+    display: block;
+    text-align: center;
+    margin-top: 3.2rem;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form-heading {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+  }
+  .contact-form-subheading {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: #515167;
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+  .contact-form-input-group {
+    margin-bottom: 1.6rem;
+  }
+  .contact-form-input-lable {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+    color: #111118;
+  }
+  .contact-form-input-field {
+    padding: 1rem 1.2rem;
+    border: 1px solid #D9D9E3;
+    border-radius: 0.8rem;
+    color: #8D8DA5;
+    margin-top: 0.8rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .footer {
+    margin: 4rem 1.6rem 0;
+    border-top: 1px solid #C0C0CE;
+    border-bottom: 1px solid #C0C0CE;
+    padding: 4rem 0;
+  }
+  .footer-logo {
+    height: 5rem;
+    margin-bottom: 1.6rem;
+  }
+  .footer-links {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .footer-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .footer-links-group-heading {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    color: #2F2F3C;
+  }
+  .footer-links-group-link {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    color: #8D8DA5;
+  }
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #8D8DA5;
+  padding: 1.6rem 0;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

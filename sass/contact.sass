@@ -1,0 +1,48 @@
+@use '_variables' as var
+@media screen and ( max-width: 430px )
+  .contact
+    display: flex
+    flex-direction: column
+    gap: 6.4rem
+    &-location
+      display: flex
+      padding: 0.8rem
+      align-items: center
+      gap: 1.6rem
+      &-icon
+        width: 3.2rem
+        height: 3.2rem
+        aspect-ratio: 1/1
+        border-radius: 0.8rem
+        border: 1px solid var.$qut-text-color
+      &-address
+        @include var.text-m($weight: 400)
+        color: var.$tri-text-color
+      &-map
+        border-radius: 1.6rem
+        width: 100%
+        object-fit: fill
+        margin-top: 0.8rem
+    &-cta
+      @include var.pri-cta()
+      margin-top: 3.2rem
+    &-form
+      width: 100%
+      &-headinggit
+        @include var.H4()
+      &-subheading
+        @include var.text-m($weight: 400)
+        color: var.$tri-text-color
+        margin-top: 1.6rem
+        margin-bottom: 3.2rem
+      &-input-group
+        margin-bottom: 1.6rem
+      &-input-lable
+        @include var.text-l($weight: 600)
+        color: var.$pri-text-color
+      &-input-field
+        padding: 1rem 1.2rem
+        border: 1px solid #D9D9E3
+        border-radius: 0.8rem
+        color: var.$qut-text-color
+        margin-top: 0.8rem

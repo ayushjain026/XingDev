@@ -44,3 +44,11 @@
           color: var.$pri-color
           margin-bottom: 2.4rem
           // cta styling same as nav
+
+@media screen and (max-width: 430px)
+  .services
+    &-cards
+      flex-direction: column
+      &-card
+        max-width: 35.8rem
+        @include var.card-shadow()
