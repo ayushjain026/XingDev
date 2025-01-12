@@ -183,6 +183,11 @@ a, a:visited, a:link {
     line-height: 2rem;
     font-weight: 600;
   }
+  .hero-cta-sec {
+    border: 1px solid #F63194;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+  }
   .hero-stats {
     flex-direction: column;
     gap: 2.4rem;
