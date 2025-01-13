@@ -1,0 +1,73 @@
+@use '_variables' as var
+.offers
+  padding: 12rem 0
+  background-color: var.$bg-color
+  &-tag
+    background-color: var.$pri-color
+    @include var.text-m($weight: 600)
+    padding: 0.8rem
+    color: var.$white
+    border-bottom-left-radius: 0.4rem
+    display: inline
+    position: absolute
+    top: 0
+    right: 0
+
+  &-heading
+    @include var.H2()
+    color: var.$pri-text-color
+    margin-bottom: 1.6rem
+    text-align: center
+  &-subheading
+    @include var.text-m($weight: 400)
+    color: var.$tri-text-color
+    width: 70%
+    margin: 0 auto 6.4rem
+    text-align: center
+  &-cards
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 3.2rem
+    &-card
+      position: relative
+      width: 38.4rem
+      border-radius: 0.8rem
+      overflow: hidden
+      background-color: var.$white
+      transition: all 0.4s ease
+      &-tag
+        background-color: var.$pri-color
+        @include var.text-m($weight: 600)
+        padding: 0.4rem 0.8rem
+        color: var.$white
+        border-bottom-left-radius: 0.4rem
+        display: inline
+        position: absolute
+        top: 0
+        right: 0
+      &:hover
+        @include var.card-shadow()
+        transform: translateY(-8px)
+      &-img
+        width: 100%
+        height: 28.4rem
+        background-color: var.$pri-text-color
+      &-content
+        padding: 1.6rem 2.4rem
+        width: 100%
+        text-align: center
+        &-heading
+          @include var.H4()
+          color: var.$sec-text-color
+          margin-bottom: 2.4rem
+        &-cutoutprice
+          @include var.text-l($weight: 700)
+          color: var.$qut-text-color
+          text-decoration: line-through
+        &-currentprice
+          @include var.H4()
+          color: var.$pri-color
+          margin-bottom: 3.2rem
+          // cta styling same as nav

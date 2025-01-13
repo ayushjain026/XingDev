@@ -1,0 +1,36 @@
+@use '_variables' as var
+
+.qna
+  max-width: 72rem
+  margin: 0 auto
+  text-align: center
+  &-heading
+    @include var.H2()
+    color: var.$pri-text-color
+    margin-bottom: 2.4rem
+  &-subheading
+    @include var.text-m($weight: 500)
+    color: var.$tri-text-color
+    margin-bottom: 4rem
+  &-accordian
+    padding: 2.4rem
+    max-width: 56rem
+    background-color: var.$white
+    border-radius: 0.8rem
+    border: 1px solid black
+    margin-bottom: 2.4rem
+    &-question
+      @include var.H6()
+      color: var.$sec-text-color
+      text-align: left
+    &-answer
+      max-height: 0
+      overflow: hidden
+      transition: max-height 0.4s ease
+      margin-top: 1.6rem
+      @include var.text-m($weight: 500)
+      color: var.$qut-text-color
+      text-align: left
+
+.toggle
+  max-height: 20rem

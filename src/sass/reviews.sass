@@ -1,0 +1,87 @@
+@use '_variables' as var
+
+.reviews
+  padding: 12rem 0
+  background-color: var.$bg-color
+  &-stats
+    text-align: center
+  &-rating
+    display: flex
+    justify-content: center
+    align-items: center
+    &-num
+      @include var.H4()
+      color: var.$pri-text-color
+      margin-right: 0.8rem
+    &-stars
+      height: 3.2rem
+  &-google
+    @include var.H6()
+    color: var.$pri-text-color
+    text-align: center
+    margin-top: 2.4rem
+    &-num
+      @include var.text-m($weight: 500)
+      color: var.$tri-text-color
+      margin-top: 0.8rem
+  &-cards-container
+    overflow: scroll
+    margin: 6.4rem 0
+    width: 100%
+    padding: 2.4rem
+  &-cards
+    display: flex
+    gap: 2.4rem
+    align-items: center
+    // animation: scroll 40s linear infinite
+    &-card
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      width: 32rem
+      height: 38.4rem
+      background-color: var.$white
+      @include var.card-shadow()
+      border-radius: 0.8rem
+      flex-shrink: 0
+      padding: 2.4rem
+      &-rating
+        height: 2.4rem
+        margin: 1.6rem 0 0.8rem
+      &-review
+        @include var.text-m($weight: 400)
+        color: var.$tri-text-color
+      &-user
+        display: flex
+        align-items: center
+        gap: 0.8rem
+        padding-bottom: 1.6rem
+        border-bottom: 1px solid var.$bg-color
+        &-img
+          height: 4.8rem
+          width: 4.8rem
+          background-color: var.$tri-text-color
+          border-radius: 100rem
+        &-name
+          @include var.text-l($weight: 600)
+          color: var.$sec-text-color
+        &-from
+          @include var.text-m($weight: 400)
+          color: var.$qut-text-color
+  &-cta
+    padding: 0.8rem 1.2rem
+    background-color: #3169F6
+    @include var.text-m($weight: 600)
+    color: var.$white
+    border-radius: 0.4rem
+
+.help
+  text-align: center
+
+.read-reviews
+  padding: 0.4rem 0.8rem
+  @include var.text-m($weight: 500)
+  color: var.$qut-text-color
+  border: 1px solid #D9D9E3
+  border-radius: 0.8rem
+  display: inline-block

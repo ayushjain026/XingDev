@@ -1,0 +1,50 @@
+@use '_variables' as var
+
+.footer
+  display: flex
+  justify-content: space-between
+  margin: 1rem 4rem
+  border-top: 1px solid #C0C0CE
+  border-bottom: 1px solid #C0C0CE
+  padding: 6.4rem 0
+  &-logo
+    height: 5rem
+    margin-bottom: 1.6rem
+  &-address
+    @include var.text-m($weight: 400)
+    color: var.$tri-text-color
+    max-width: 40rem
+  &-links
+    display: flex
+    gap: 8rem
+    &-group
+      display: flex
+      flex-direction: column
+      gap: 0.8rem
+      &-heading
+        margin-bottom: 1.6rem
+        @include var.H6()
+        color: var.$sec-text-color
+      &-link
+        @include var.text-m($weight: 600)
+        color: var.$qut-text-color
+
+@media screen and ( max-width: 430px )
+  .footer
+    margin: 4rem 1.6rem 0 //
+    padding: 4rem 0
+    display: block
+    &-links
+      margin-top: 6rem
+      display: flex
+      flex-direction: column
+      gap: 4rem
+      &-group
+        flex-direction: column
+        gap: 0.8rem
+
+.copyright
+  @include var.text-m($weight: 600)
+  color: var.$qut-text-color
+  padding: 1.6rem 0
+  text-align: center

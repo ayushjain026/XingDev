@@ -1,0 +1,32 @@
+// contains global and resets styles
+@use '_variables' as var
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+
+body
+  font-family: 'DM Sans', sans-serif
+  background-color: var.$bg-color
+
+a,a:visited,a:link
+  text-decoration: none
+
+.section
+  padding: 12rem
+  background-color: var.$bg-color
+
+.pri-text
+  color: var.$pri-color
+
+@media screen and (max-width: 430px)
+  .section
+    padding: 12rem 1.6rem
+
+@media screen and ( min-width:  1441px)
+  html
+    font-size: 75%

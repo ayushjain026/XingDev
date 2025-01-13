@@ -1,0 +1,64 @@
+
+// TYPOGRAPHY
+@mixin H1()
+  font-size: 5.6rem
+  line-height: 6.2rem
+  font-weight: 700
+@mixin H2()
+  font-size: 3.6rem
+  line-height: 4rem
+  font-weight: 700
+@mixin H4()
+  font-size: 2.8rem
+  line-height: 3.2rem
+  font-weight: 600
+@mixin H5()
+  font-size: 2.4rem
+  line-height: 2.8rem
+  font-weight: 600
+@mixin H6()
+  font-size: 2rem
+  line-height: 2.2rem
+  font-weight: 600
+
+@mixin text-s($weight: 400)
+  font-size: 1.2rem
+  line-height: 2.0rem
+  font-weight: $weight
+@mixin text-m($weight: 400)
+  font-size: 1.4rem
+  line-height: 2.4rem
+  font-weight: $weight
+@mixin text-l($weight: 400)
+  font-size: 1.6rem
+  line-height: 2.6rem
+  font-weight: $weight
+
+// colors
+$pri-color: #F63194 //pink-400
+$accent-color: #F6D631
+$bg-color: #F3F3F7 //grey-cool-0
+
+$pri-text-color: #111118 // grey-cool-950
+$sec-text-color: #2F2F3C // grey-cool-800
+$tri-text-color: #515167 // grey-cool-600
+$qut-text-color: #8D8DA5 // grey-cool-300
+
+$white: #FFFFFF
+$black: #000000
+
+// components
+@mixin pri-cta()
+  padding: 0.8rem 1.2rem
+  background-color: $pri-color
+  color: $white
+  border-radius: 0.8rem
+  display: block
+  text-align: center
+
+// shadows
+@mixin btn-shadow()
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2)
+
+@mixin card-shadow()
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2)
