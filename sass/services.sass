@@ -17,6 +17,7 @@
       overflow: hidden
       background-color: var.$white
       transition: all 0.4s ease
+      position: relative
       &:hover
         @include var.card-shadow()
         transform: translateY(-8px)
@@ -31,7 +32,7 @@
           @include var.H4()
           color: var.$sec-text-color
         &-des
-          @include var.text-m($weight: 400)
+          @include var.text-m($weight: 500)
           color: var.$tri-text-color
           margin-top: 0.8rem
           margin-bottom: 4rem
@@ -44,6 +45,11 @@
           color: var.$pri-color
           margin-bottom: 2.4rem
           // cta styling same as nav
+      &-tag
+        position: absolute
+        top: 0
+        left: 2rem
+        width: 14rem
 
 @media screen and (max-width: 430px)
   .services

@@ -4,6 +4,20 @@
   height: 81rem
   overflow: hidden
   position: relative
+  &-checks
+    margin: 4rem 0
+    &-check
+      display: flex
+      justify-content: flex-start
+      gap: 1rem
+      align-items: center
+      margin-bottom: 2rem
+      &-icon
+        width: 2.4rem
+      &-text
+        @include var.text-l($weight: 600)
+        color: #C0C0CE
+
   &-content-container
     display: flex
     align-items: center
@@ -22,7 +36,7 @@
   &-ctas
     display: flex
     margin-top: 4rem
-    margin-bottom: 8rem
+    margin-bottom: 4rem
     align-items: center
     gap: 4rem
   &-cta
@@ -105,8 +119,8 @@
     &-cta
       @include var.text-s($weight: 600)
     &-cta-sec
+      @include var.text-s($weight: 600)
       border: 1px solid var.$pri-color
-      transform: translateY(-2px)
       color: var.$white
     &-stats
       flex-direction: column
