@@ -36,8 +36,8 @@
     // animation: scroll 40s linear infinite
     &-card
       display: flex
-      flex-direction: column
       justify-content: space-between
+      flex-direction: column
       width: 32rem
       height: 38.4rem
       background-color: var.$white
@@ -47,14 +47,16 @@
       padding: 2.4rem
       &-rating
         height: 2.4rem
+        margin: 1.6rem 0 0.8rem
       &-review
         @include var.text-m($weight: 400)
         color: var.$tri-text-color
-        margin-top: 1.6rem
       &-user
         display: flex
         align-items: center
         gap: 0.8rem
+        padding-bottom: 1.6rem
+        border-bottom: 1px solid var.$bg-color
         &-img
           height: 4.8rem
           width: 4.8rem
@@ -75,3 +77,11 @@
 
 .help
   text-align: center
+
+.read-reviews
+  padding: 0.4rem 0.8rem
+  @include var.text-m($weight: 500)
+  color: var.$qut-text-color
+  border: 1px solid #D9D9E3
+  border-radius: 0.8rem
+  display: inline-block

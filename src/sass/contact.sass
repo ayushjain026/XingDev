@@ -28,7 +28,12 @@
       margin-top: 0.8rem
   &-cta
     @include var.pri-cta()
+    @include var.text-m($weight: 500)
     margin-top: 3.2rem
+    transition: all 0.4s ease
+    &:hover
+      transform: translateY(-2px)
+      @include var.btn-shadow()
   &-location
     display: flex
     padding: 0.8rem
