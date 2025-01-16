@@ -1,5 +1,4 @@
 import stars from "../assets/star.svg";
-import { useNavigate } from "react-router-dom";
 
 function ReviewsSection() {
   return (
@@ -46,8 +45,7 @@ function ReviewsSection() {
   );
 }
 
-function ReviewCard({ reviewText, userName, userImage, userReviewUrl = "" }) {
-
+function ReviewCard({reviewText, userName, userImage, userReviewUrl}) {
   const navigateToUserReview = (googleReviewUrl) => {
     if (googleReviewUrl?.userReviewUrl) {
       window.open(googleReviewUrl.userReviewUrl, "_blank");
@@ -55,7 +53,6 @@ function ReviewCard({ reviewText, userName, userImage, userReviewUrl = "" }) {
       console.error("Invalid URL");
     }
   };
-
   return (
     <div className="reviews-cards-card">
       <div>
