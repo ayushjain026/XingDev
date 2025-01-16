@@ -51,6 +51,11 @@
       &-review
         @include var.text-m($weight: 400)
         color: var.$tri-text-color
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 6
+        overflow: hidden
+        text-overflow: ellipsis
       &-user
         display: flex
         align-items: center

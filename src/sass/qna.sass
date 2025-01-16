@@ -4,6 +4,7 @@
   max-width: 72rem
   margin: 0 auto
   text-align: center
+  background-color: var.$bg-color
   &-heading
     @include var.H2()
     color: var.$pri-text-color
@@ -34,3 +35,7 @@
 
 .toggle
   max-height: 20rem
+
+@media screen and (max-width: 460px)
+  .qna
+    padding: 0 1.6rem
