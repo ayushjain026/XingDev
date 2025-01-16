@@ -61,7 +61,7 @@ function ServiceCard({ heading, desc, cutoutPrice, actualPrice }) {
           {actualPrice}
         </p>
         <a className="hero-cta" onClick={() => scrollToSection('personalized-treatment')}>
-          Get Free Consultation
+          Book Your Appointment
         </a>
       </div>
     </div>

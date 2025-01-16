@@ -28,7 +28,7 @@ function Navbar() {
         </div>
         <div>
         <a href="#" className="nav-cta" onClick={() => scrollToSection('personalized-treatment')}>
-          Get Free Consultation
+          Book Your Appointment
         </a>
         </div>
       </nav>

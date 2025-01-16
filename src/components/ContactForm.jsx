@@ -84,11 +84,12 @@ function ContactForm() {
               Hair Keratin
             </option>
             <option value="Nanoplastia">Nanoplastia</option>
+            <option value="others">others</option>
           </select>
         </div>
       </div>
       <button onClick={SubmitData} className="contact-cta">
-        Get Free Consultation
+        Book Your Appointment
       </button>
     </div>
   );

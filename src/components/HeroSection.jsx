@@ -10,6 +10,13 @@ function HeroSection() {
     }
   };
 
+  const scrollToServiceSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
+    }
+  };
+
   return (
     <>
       <Carousel></Carousel>
@@ -20,24 +27,24 @@ function HeroSection() {
           </h1>
           <div className="hero-ctas">
             <a href="#" className="hero-cta" onClick={() => scrollToSection('personalized-treatment')}>
-              Get Free Consultation
+              Book Your Appointment
             </a>
-            <a href="#" className="hero-cta-sec">
+            <a href="#" className="hero-cta-sec" onClick={scrollToServiceSection('services-cards')}>
               Explore Services
             </a>
           </div>
           <div className="hero-checks">
             <div className="hero-checks-check">
               <img src={checkIcon} alt="" className="hero-checks-check-icon" />
-              <p className="hero-checks-check-text">Choose Your Price</p>
+              <p className="hero-checks-check-text" style={{ color: "white" }}>Choose Your Price</p>
             </div>
             <div className="hero-checks-check">
               <img src={checkIcon} alt="" className="hero-checks-check-icon" />
-              <p className="hero-checks-check-text">Choose Your Product</p>
+              <p className="hero-checks-check-text" style={{ color: "white" }}>Choose Your Product</p>
             </div>
             <div className="hero-checks-check">
               <img src={checkIcon} alt="" className="hero-checks-check-icon" />
-              <p className="hero-checks-check-text">
+              <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Premium Service starting from 
                 <span className="pri-text"> Rs. 2999</span>
               </p>
@@ -45,12 +52,12 @@ function HeroSection() {
           </div>
           <div className="hero-stats">
             <div>
-              <p className="hero-stats-num">10000+</p>
-              <p className="hero-stats-des">Haircare Delivered</p>
+              <p className="hero-stats-num" style={{ color: "white" }}>10000+</p>
+              <p className="hero-stats-des" style={{ color: "white" }}>Haircare Delivered</p>
             </div>
             <div>
-              <p className="hero-stats-num">98.9%</p>
-              <p className="hero-stats-des">Customer Satisfaction</p>
+              <p className="hero-stats-num" style={{ color: "white" }}>98.9%</p>
+              <p className="hero-stats-des" style={{ color: "white" }}>Customer Satisfaction</p>
             </div>
           </div>
         </div>

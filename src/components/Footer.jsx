@@ -6,14 +6,16 @@ function Footer() {
         <div>
           <img src={logo} alt="" className="footer-logo" />
           <p className="footer-address">
-            1st floor, Number 267, SV Plaza, 60 Feet Rd, AECS Layout - A Block,
-            AECS Layout, Marathahalli, Bengaluru, Karnataka 560037
+          Xing Premium Unisex Salon, <br />
+          Opposite Clult PlayOn Fitness,<br />
+          71/1A, Samvit Greens,<br />
+          Sarjapur - Marathahalli Rd, opposite St. Peter's School, Kaikondrahalli, Bengaluru, Karnataka 560035
           </p>
         </div>
         <div className="footer-links">
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Quick Links</h2>
-            <a href="" className="footer-links-group-link">
+            <a href="" className="footer-links-group-link" style={{ cursor: 'pointer' }} >
               Services
             </a>
             <a href="" className="footer-links-group-link">
@@ -34,8 +36,8 @@ function Footer() {
             >
               Instagram
             </a>
-            <a href="" className="footer-links-group-link">
-              Fcaebook
+            <a href="https://www.facebook.com/people/XING-Salon-Nails-and-Tattoo/100089547421311/" className="footer-links-group-link">
+              Facebook
             </a>
           </div>
           <div className="footer-links-group">
