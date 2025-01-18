@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import PopupFormModal from "./PopupFormModule";
 import ContactForm from "./ContactForm";
+import logo from "../assets/logo.png";
 
 function LandingPage() {
   const [showModal, setShowModal] = useState(false);
@@ -44,6 +45,7 @@ function LandingPage() {
           >
             X
           </p>
+          <img src={logo} alt="logo" className="popup-logo" />
         </div>
       )}
       {showModal && <PopupFormModal closeModal={closeModal} />}

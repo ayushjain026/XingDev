@@ -84,7 +84,7 @@ function ContactForm() {
                 background: "#fff",
                 outline: "none",
               }}
-              className="contact-form-dropdown"
+              className="contact-form-dropdown contact-form-input-field"
             >
               <option defaultChecked value="Hair Keratin">
                 Hair Keratin

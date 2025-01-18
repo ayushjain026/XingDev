@@ -41,6 +41,7 @@ a,a:visited,a:link
   max-width: 56rem
   background-color: white
   border-radius: 1.6rem
+  @include var.card-shadow()
   
 
 .popup-close
@@ -53,7 +54,10 @@ a,a:visited,a:link
   background-color: var.$sec-text-color
   border-radius: 1.6rem
   cursor: pointer
-
+.popup-logo
+  position: absolute
+  top: 2rem
+  left: 2rem
 
 @media screen and (max-width: 430px)
   .section
@@ -66,6 +70,9 @@ a,a:visited,a:link
     padding: 2rem
     font-size: 1.6rem
     top: 1rem
+    right: 1rem
+  .popup-logo
+    top: 2rem
     right: 1rem
 
 @media screen and ( min-width:  1441px)
