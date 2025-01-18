@@ -34,13 +34,16 @@ function LandingPage() {
       <ContactSection></ContactSection>
       <Footer></Footer>
       {isOpen && (
-        <div
-          className="popup-container"
-          onClick={() => {
-            setIsOpen(false);
-          }}
-        >
+        <div className="popup-container">
           <ContactForm></ContactForm>
+          <p
+            className="popup-close"
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            X
+          </p>
         </div>
       )}
       {showModal && <PopupFormModal closeModal={closeModal} />}
