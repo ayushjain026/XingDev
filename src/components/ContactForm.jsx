@@ -56,10 +56,14 @@ function ContactForm() {
             <input
               required
               onChange={(e) => {
-                setUserNumber(e.target.value);
+                const value = e.target.value;
+                // Allow only numbers and restrict to 10 digits
+                if (value.length < 11 && /^[0-9]*$/.test(value)) {
+                  setUserNumber(value);
+                }
               }}
+              value={userNumber}
               type="number"
-              maxLength={10}
               style={{ width: "100%" }}
               className="contact-form-input-field"
             />
