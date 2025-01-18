@@ -1,16 +1,17 @@
-import Navbar from './Navbar';
-import HeroSection from './HeroSection';
-import ServicesSection from './ServicesSection';
-import Carousel from './Carousel';
-import ReviewsSection from './ReviewsSection';
-import QnaSection from './QnaSection';
-import ContactSection from './ContactSection';
-import Footer from './Footer';
-import { useState } from 'react';
-import PopupFormModal from './PopupFormModule';
+import Navbar from "./Navbar";
+import HeroSection from "./HeroSection";
+import ServicesSection from "./ServicesSection";
+import Carousel from "./Carousel";
+import ReviewsSection from "./ReviewsSection";
+import QnaSection from "./QnaSection";
+import ContactSection from "./ContactSection";
+import Footer from "./Footer";
+import { useState } from "react";
+import PopupFormModal from "./PopupFormModule";
+import ContactForm from "./ContactForm";
 
 function LandingPage() {
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -20,21 +21,29 @@ function LandingPage() {
   const closeModal = () => {
     setShowModal(false);
   };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <Navbar openModal={openModal}></Navbar>
       <HeroSection></HeroSection>
-      <ServicesSection></ServicesSection>
+      <ServicesSection setIsOpen={setIsOpen}></ServicesSection>
       <Carousel></Carousel>
       <ReviewsSection></ReviewsSection>
       <QnaSection></QnaSection>
       <ContactSection></ContactSection>
       <Footer></Footer>
-
-      {showModal && (
-        <PopupFormModal closeModal={closeModal} />
+      {isOpen && (
+        <div
+          className="popup-container"
+          onClick={() => {
+            setIsOpen(false);
+          }}
+        >
+          <ContactForm></ContactForm>
+        </div>
       )}
+      {showModal && <PopupFormModal closeModal={closeModal} />}
     </>
   );
 }

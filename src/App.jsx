@@ -1,11 +1,11 @@
-import './sass/main.sass';
-import LandingPage from './components/LandingPage';
-import { Toaster } from 'react-hot-toast';
+import "./sass/main.sass";
+import LandingPage from "./components/LandingPage";
+import ContactForm from "./components/ContactForm";
+import { useState } from "react";
 
 function App() {
   return (
     <>
-      <div><Toaster/></div>
       <LandingPage></LandingPage>
     </>
   );

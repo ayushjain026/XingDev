@@ -23,9 +23,34 @@ a,a:visited,a:link
 .pri-text
   color: var.$pri-color
 
+.popup-container
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 8
+  background-color: var.$bg-color
+
+.popup-container .contact-form
+  border: 1px solid #D9D9E3
+  padding: 4rem
+  max-width: 56rem
+  background-color: white
+  border-radius: 1.6rem
+
+
+
 @media screen and (max-width: 430px)
   .section
     padding: 12rem 1.6rem
+  .popup-container
+    padding: 0 1rem
+  .popup-container .contact-form
+    padding: 2rem 1.6rem
 
 @media screen and ( min-width:  1441px)
   html

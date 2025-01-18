@@ -21,7 +21,7 @@ const carddata = [
   },
 ];
 
-function ServicesSection() {
+function ServicesSection({ setIsOpen }) {
   const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
   const textStyle = {
     fontSize: isMobile ? "16px" : "18px", // Slightly larger font size for mobile
@@ -50,6 +50,7 @@ function ServicesSection() {
             desc={service.description}
             cutoutPrice={service.cutoutPrice}
             actualPrice={service.currentPrice}
+            setIsOpen={setIsOpen}
           />
         ))}
       </div>
@@ -60,7 +61,14 @@ function ServicesSection() {
 export default ServicesSection;
 
 // ServiceCard Component
-function ServiceCard({ heading, question, desc, cutoutPrice, actualPrice }) {
+function ServiceCard({
+  heading,
+  question,
+  desc,
+  cutoutPrice,
+  actualPrice,
+  setIsOpen,
+}) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -83,7 +91,7 @@ function ServiceCard({ heading, question, desc, cutoutPrice, actualPrice }) {
         }}
       >
         <img
-          src={heading=='Nanoplastia' ? NanoPlastia : HairKeratin}
+          src={heading == "Nanoplastia" ? NanoPlastia : HairKeratin}
           alt="Nano Plastia"
           style={{
             width: "100%",
@@ -107,10 +115,7 @@ function ServiceCard({ heading, question, desc, cutoutPrice, actualPrice }) {
         <p className="services-cards-card-content-currentprice">
           {actualPrice}
         </p>
-        <a
-          className="hero-cta"
-          onClick={() => scrollToSection("personalized-treatment")}
-        >
+        <a className="hero-cta" onClick={() => setIsOpen(true)}>
           Book Your Appointment
         </a>
       </div>
