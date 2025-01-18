@@ -13,16 +13,13 @@ function Navbar() {
       <nav className="nav">
         <img src={logo} alt="logo" srcset="" className="nav-logo" />
         <div className="nav-links">
-          <a href="#" className="nav-links-link">
+          <a onClick={() => (scrollToSection("services-section"))} className="nav-links-link">
             Service
           </a>
-          <a href="#" className="nav-links-link">
+          <a onClick={() => {scrollToSection("review-section")}} className="nav-links-link">
             Reviews
           </a>
-          <a href="#" className="nav-links-link">
-            Offers
-          </a>
-          <a href="#" className="nav-links-link">
+          <a onClick={() => {scrollToSection("contact section")}} className="nav-links-link">
             Contact
           </a>
         </div>

@@ -32,7 +32,7 @@ function ServicesSection() {
   };
 
   return (
-    <section className="services section">
+    <section id="services-section" className="services section">
       <h2 className="services-heading">
         <span className="pri-text">“Get Shine on Your Hair”</span>
         <br />

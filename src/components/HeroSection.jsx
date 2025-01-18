@@ -29,7 +29,7 @@ function HeroSection() {
             <a href="#" className="hero-cta" onClick={() => scrollToSection('personalized-treatment')}>
               Book Your Appointment
             </a>
-            <a href="#" className="hero-cta-sec" onClick={scrollToServiceSection('services-cards')}>
+            <a className="hero-cta-sec" onClick={() => scrollToServiceSection('services-section')}>
               Explore Services
             </a>
           </div>

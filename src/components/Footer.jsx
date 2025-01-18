@@ -1,5 +1,13 @@
 import logo from '../assets/logo.png';
 function Footer() {
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <section className="footer">
@@ -15,16 +23,16 @@ function Footer() {
         <div className="footer-links">
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Quick Links</h2>
-            <a href="" className="footer-links-group-link" style={{ cursor: 'pointer' }} >
+            <a onClick={() => (scrollToSection("services-section"))} className="footer-links-group-link" style={{ cursor: 'pointer' }} >
               Services
             </a>
-            <a href="" className="footer-links-group-link">
+            <a onClick={() => {scrollToSection("review-section")}} className="footer-links-group-link">
               Reviews
             </a>
-            <a href="" className="footer-links-group-link">
+            <a onClick={() => {scrollToSection("contact section")}} className="footer-links-group-link">
               Contact
             </a>
-            <a href="" className="footer-links-group-link">
+            <a onClick={() => {scrollToSection("contact section")}} className="footer-links-group-link">
               Location
             </a>
           </div>
@@ -38,6 +46,9 @@ function Footer() {
             </a>
             <a href="https://www.facebook.com/people/XING-Salon-Nails-and-Tattoo/100089547421311/" className="footer-links-group-link">
               Facebook
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B917996666012&text=I+want+to+avail+hair+offer&type=phone_number&app_absent=0" className="footer-links-group-link">
+              WhatsApp
             </a>
           </div>
           <div className="footer-links-group">

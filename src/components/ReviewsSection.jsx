@@ -2,7 +2,7 @@ import stars from "../assets/star.svg";
 
 function ReviewsSection() {
   return (
-    <section className="reviews">
+    <section id="review-section" className="reviews">
       <div className="reviews-stats">
         <div className="reviews-rating">
           <p className="reviews-rating-num">4.9</p>
