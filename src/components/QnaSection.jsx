@@ -9,6 +9,11 @@ function QnaSection() {
 
   const accordionData = [
     {
+      question: 'Do you charge for hair care consultation?',
+      answer:
+        'We are passionate about hair, we enjoy make hair healthy and gorgeous and that’s our kick ! You can happily walk-in for a consultation which we do not charge. Their is no obligation to take service from us, you can choose you preferred salon. Just Be Sepcial ! Be Gorgeous !',
+    },
+    {
       question: 'How does a keratin treatment work?',
       answer:
         'A keratin treatment involves applying a keratin solution to your hair, which is then sealed in using heat. The treatment smooths the hair, eliminates frizz, adds shine, and helps to straighten it. It works by filling in the gaps in the hair cuticle with keratin, strengthening the hair and making it look healthier.',
@@ -34,11 +39,6 @@ function QnaSection() {
       question: 'Do you provide discount on post care ?',
       answer:
         'Ideally for long lasting results, use of shampoos and conditioners free of sulphates, parabens, alcohol, and fragrances is recommended. They should also be specifically designed for treated hair.Being kind and gentle to your hair is of utmost importance after keratin treatment. Wash your hair only 2 to 3 times a week with gentle products.\nWe will share a post care card and also all our post care products are sold at no profit and zero margin prices, hence the lowest in the market.',
-    },
-    {
-      question: 'Do you charge for hair care consultation?',
-      answer:
-        'We are passionate about hair, we enjoy make hair healthy and gorgeous and that’s our kick ! You can happily walk-in for a consultation which we do not charge. Their is no obligation to take service from us, you can choose you preferred salon. Just Be Sepcial ! Be Gorgeous !',
     },
   ];
 

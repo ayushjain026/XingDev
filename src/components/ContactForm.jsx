@@ -95,7 +95,7 @@ function ContactForm() {
           </div>
         </div>
         <button onSubmit={SubmitData} className="contact-cta">
-          Book Your Appointment
+          Avail this Offer Now
         </button>
       </form>
     </div>

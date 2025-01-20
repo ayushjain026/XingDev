@@ -17,7 +17,8 @@ function Footer() {
           Xing Premium Unisex Salon, <br />
           Opposite Clult PlayOn Fitness,<br />
           71/1A, Samvit Greens,<br />
-          Sarjapur - Marathahalli Rd, opposite St. Peter's School, Kaikondrahalli, Bengaluru, Karnataka 560035
+          Sarjapur - Marathahalli Rd, <br />
+          opposite St. Peter's School, Kaikondrahalli, Bengaluru, Karnataka 560035
           </p>
         </div>
         <div className="footer-links">

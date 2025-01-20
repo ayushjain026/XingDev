@@ -4,6 +4,9 @@
   max-width: 72rem
   margin: 0 auto
   text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
   background-color: var.$bg-color
   &-heading
     @include var.H2()
@@ -14,14 +17,15 @@
     color: var.$tri-text-color
     margin-bottom: 4rem
   &-accordian
-    padding: 2.4rem
+    padding: 1rem
     max-width: 56rem
     background-color: var.$white
-    border-radius: 0.8rem
+    border-radius: 0.9rem
     border: 1px solid black
-    margin-bottom: 2.4rem
+    margin-bottom: 1.5rem
     &-question
       @include var.H6()
+      font-size: 1.5em
       color: var.$sec-text-color
       text-align: left
     &-answer
