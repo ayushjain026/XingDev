@@ -36,30 +36,30 @@ function CarouselSection() {
   };
 
   return (
-    <section className="carousel">
+    <section className="unique-carousel">
       {/* Displaying the current image */}
-      <div className="carousel-image-container">
+      <div className="unique-carousel-image-container">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="carousel-img"
+          className="unique-carousel-img"
         />
       </div>
 
       {/* Navigation Buttons */}
-      <button className="carousel-button prev" onClick={prevImage}>
+      <button className="unique-carousel-button unique-prev" onClick={prevImage}>
         &#8249; {/* Left arrow */}
       </button>
-      <button className="carousel-button next" onClick={nextImage}>
+      <button className="unique-carousel-button unique-next" onClick={nextImage}>
         &#8250; {/* Right arrow */}
       </button>
 
       {/* Indicators */}
-      <div className="carousel-indicators">
+      <div className="unique-carousel-indicators">
         {images.map((_, index) => (
           <span
             key={index}
-            className={`indicator ${index === currentIndex ? 'active' : ''}`}
+            className={`unique-indicator ${index === currentIndex ? 'unique-active' : ''}`}
             onClick={() => setCurrentIndex(index)}
           ></span>
         ))}
@@ -67,14 +67,14 @@ function CarouselSection() {
 
       {/* Styles */}
       <style>{`
-        .carousel {
+        .unique-carousel {
           position: relative;
           width: 100%;
           height: 100vh; /* Full height viewport */
           overflow: hidden;
         }
 
-        .carousel-image-container {
+        .unique-carousel-image-container {
           width: 100%;
           height: 100%;
           display: flex;
@@ -82,13 +82,13 @@ function CarouselSection() {
           align-items: center;
         }
 
-        .carousel-img {
+        .unique-carousel-img {
           max-width: 100%;
           max-height: 100%;
           object-fit: contain; /* Ensures the entire image is visible */
         }
 
-        .carousel-button {
+        .unique-carousel-button {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -101,15 +101,15 @@ function CarouselSection() {
           z-index: 10;
         }
 
-        .carousel-button.prev {
+        .unique-carousel-button.unique-prev {
           left: 20px;
         }
 
-        .carousel-button.next {
+        .unique-carousel-button.unique-next {
           right: 20px;
         }
 
-        .carousel-indicators {
+        .unique-carousel-indicators {
           position: absolute;
           bottom: 20px;
           width: 100%;
@@ -118,7 +118,7 @@ function CarouselSection() {
           gap: 8px;
         }
 
-        .indicator {
+        .unique-indicator {
           width: 12px;
           height: 12px;
           background-color: gray;
@@ -126,7 +126,7 @@ function CarouselSection() {
           cursor: pointer;
         }
 
-        .indicator.active {
+        .unique-indicator.unique-active {
           background-color: white;
         }
       `}</style>
