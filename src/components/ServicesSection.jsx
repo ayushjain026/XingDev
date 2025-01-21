@@ -14,7 +14,7 @@ const carddata = [
   },
   {
     heading: "Nanoplastia",
-    question: "Frizzy, Dull Hair, Tangled Hair messing your look?  We got you covered !",
+    question: "Frizzy, Dull Hair, Tangled Hair <br />We got you covered !",
     description:
       "Nanplastia is one of the most advanced Hair treatment, which regular straightening manages your hair, Nanoplastia infuses protine and brings nearly 80% of the straightening effect. <br />Choose our Nanoplastia Treatment at <b>50% OFF</b> for straightening, shiny, Gorgeous hair.",
     cutoutPrice: "Rs. 13999",
@@ -115,8 +115,8 @@ function ServiceCard({
         <p
           className="services-cards-card-des"
           style={{ fontSize: "18px", lineHeight: "1.5" }}
+          dangerouslySetInnerHTML={{ __html: question }}
         >
-          {question}
         </p>
 
         <p className="services-cards-card-content-des" dangerouslySetInnerHTML={{ __html: desc }}></p>
