@@ -1,4 +1,13 @@
 import stars from "../assets/star.svg";
+import r1 from "../assets/reviews/r1.jpeg";
+import r2 from "../assets/reviews/r2.jpeg";
+import r3 from "../assets/reviews/r3.jpeg";
+import r4 from "../assets/reviews/r4.jpeg";
+import r5 from "../assets/reviews/r5.jpeg";
+import r6 from "../assets/reviews/r6.jpeg";
+import r7 from "../assets/reviews/r7.jpeg";
+
+const images = [r1, r2, r3, r4, r5, r6, r7]; // Store images in an array
 
 function ReviewsSection() {
   return (
@@ -22,14 +31,15 @@ function ReviewsSection() {
       </div>
       <div className="reviews-cards-container">
         <div className="reviews-cards">
-          {reviews.map((review, index) => (
-            <ReviewCard
-              key={index}
-              reviewText={review.reviewText}
-              userName={review.user.name}
-              userImage={review.user.imgSrc}
-              userReviewUrl={review?.user?.reviewUrl}
-            />
+          {images.map((image, index) => (
+            <ReviewImageCard index={index} image={image} />
+            // <ReviewCard
+            //   key={index}
+            //   reviewText={review.reviewText}
+            //   userName={review.user.name}
+            //   userImage={review.user.imgSrc}
+            //   userReviewUrl={review?.user?.reviewUrl}
+            // />
           ))}
         </div>
       </div>
@@ -45,7 +55,7 @@ function ReviewsSection() {
   );
 }
 
-function ReviewCard({reviewText, userName, userImage, userReviewUrl}) {
+function ReviewCard({ reviewText, userName, userImage, userReviewUrl }) {
   const navigateToUserReview = (googleReviewUrl) => {
     if (googleReviewUrl?.userReviewUrl) {
       window.open(googleReviewUrl.userReviewUrl, "_blank");
@@ -87,7 +97,52 @@ function ReviewCard({reviewText, userName, userImage, userReviewUrl}) {
         <p className="reviews-cards-card-review">{reviewText}</p>
       </div>
       <div>
-        <p className="read-reviews" onClick={() => navigateToUserReview({userReviewUrl})}>Read Full Review {">"}</p>
+        <p
+          className="read-reviews"
+          onClick={() => navigateToUserReview({ userReviewUrl })}
+        >
+          Read Full Review {">"}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ReviewImageCard(image) {
+  const navigateToUserReview = (googleReviewUrl) => {
+    if (googleReviewUrl?.userReviewUrl) {
+      window.open(googleReviewUrl.userReviewUrl, "_blank");
+    } else {
+      console.error("Invalid URL");
+    }
+  };
+  return (
+    <div
+      className="reviews-cards-card"
+      style={{
+        width: "350px",
+        height: "300px",
+        overflow: "hidden",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <img
+          src={image.image}
+          alt="Review"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain", // Ensures the image covers the div
+          }}
+        />
       </div>
     </div>
   );
@@ -113,8 +168,9 @@ const reviews = [
     user: {
       name: "Drishya P R",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a-/ALV-UjVRQjw9jZipiIzkM-mNd2KBaO09N0EB2Rp4ki-RGSeSYb0Y67fg=s40-c-rp-mo-br100",
-      reviewUrl: "https://g.co/kgs/8JtF3Vq"
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjVRQjw9jZipiIzkM-mNd2KBaO09N0EB2Rp4ki-RGSeSYb0Y67fg=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/8JtF3Vq",
     },
   },
   {
@@ -123,8 +179,9 @@ const reviews = [
     user: {
       name: "Sadhana Menon",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a-/ALV-UjV27yMQAaeV1tU9SpzOQJz9xtznr7W8XDZ4DTP9ygJTKLInASVG=s40-c-rp-mo-br100",
-      reviewUrl: "https://g.co/kgs/DuawmuU"
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjV27yMQAaeV1tU9SpzOQJz9xtznr7W8XDZ4DTP9ygJTKLInASVG=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/DuawmuU",
     },
   },
   {
@@ -133,8 +190,9 @@ const reviews = [
     user: {
       name: "God Punk",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a-/ALV-UjWWBO2tPenbL8yC3xMfUMj6YwuNrCEu0CPZJF8dExtOw8pFf0g8=s40-c-rp-mo-br100",
-      reviewUrl: "https://g.co/kgs/e8yts4A"
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjWWBO2tPenbL8yC3xMfUMj6YwuNrCEu0CPZJF8dExtOw8pFf0g8=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/e8yts4A",
     },
   },
   {
@@ -143,8 +201,9 @@ const reviews = [
     user: {
       name: "Renu saini",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a-/ALV-UjXiRz2-57jfgxU2UuQ187HbcpzRtY1Ky_aWKFOr2lxaMtQ-nxW0sA=s40-c-rp-mo-br100",
-      reviewUrl: 'https://g.co/kgs/cyii9rS'
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjXiRz2-57jfgxU2UuQ187HbcpzRtY1Ky_aWKFOr2lxaMtQ-nxW0sA=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/cyii9rS",
     },
   },
   {
@@ -153,8 +212,9 @@ const reviews = [
     user: {
       name: "YES WE CAN Champa Singha",
       source: "Google Reviews",
-      imgSrc: 'https://lh3.googleusercontent.com/a-/ALV-UjVlyXnOn81DDevC8zSW2sWcBvf0_0yHutwWrzVQomDHI4CXgNLcYw=s40-c-rp-mo-br100',
-      reviewUrl: 'https://g.co/kgs/c11ZuwR'
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjVlyXnOn81DDevC8zSW2sWcBvf0_0yHutwWrzVQomDHI4CXgNLcYw=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/c11ZuwR",
     },
   },
   {
@@ -163,8 +223,9 @@ const reviews = [
     user: {
       name: "Mark D'Souza",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a-/ALV-UjXAyziJnYvr_nhNV1T-p6mDfnvcbs7HOmo33zTYRHnb5k8HqZSlTQ=s40-c-rp-mo-ba5-br100",
-      reviewUrl: 'https://g.co/kgs/skRDeZ3'
+      imgSrc:
+        "https://lh3.googleusercontent.com/a-/ALV-UjXAyziJnYvr_nhNV1T-p6mDfnvcbs7HOmo33zTYRHnb5k8HqZSlTQ=s40-c-rp-mo-ba5-br100",
+      reviewUrl: "https://g.co/kgs/skRDeZ3",
     },
   },
   {
@@ -173,8 +234,9 @@ const reviews = [
     user: {
       name: "palavalli yaswanthi",
       source: "Google Reviews",
-      imgSrc: "https://lh3.googleusercontent.com/a/ACg8ocJV06A1SA_09XJ9tcVUu2uggRx0LJ1sEMIpiSS3hco403hF-Q=s40-c-rp-mo-br100",
-      reviewUrl: 'https://g.co/kgs/YBf7pQb'
+      imgSrc:
+        "https://lh3.googleusercontent.com/a/ACg8ocJV06A1SA_09XJ9tcVUu2uggRx0LJ1sEMIpiSS3hco403hF-Q=s40-c-rp-mo-br100",
+      reviewUrl: "https://g.co/kgs/YBf7pQb",
     },
   },
 ];
