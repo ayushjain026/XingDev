@@ -10,6 +10,7 @@ import { useState } from "react";
 import PopupFormModal from "./PopupFormModule";
 import ContactForm from "./ContactForm";
 import logo from "../assets/logo.png";
+import CarouselSection from "./CarouselSection";
 
 function LandingPage() {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +30,7 @@ function LandingPage() {
       <Navbar openModal={openModal}></Navbar>
       <HeroSection></HeroSection>
       <ServicesSection setIsOpen={setIsOpen}></ServicesSection>
-      <Carousel></Carousel>
+      <CarouselSection></CarouselSection>
       <ReviewsSection></ReviewsSection>
       <QnaSection></QnaSection>
       <ContactSection></ContactSection>
