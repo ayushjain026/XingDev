@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function QnaSection() {
   const [activeIndex, setActiveIndex] = useState(null);

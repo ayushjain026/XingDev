@@ -43,7 +43,7 @@ const textStyle = {
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="pri-text">“Get Shine on Your Hair”</span>
+        <span className="pri-text">Get Shine on Your Hair</span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>Smoother, Stronger, Shiny, Frizz-Free</h1>

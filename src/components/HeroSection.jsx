@@ -22,7 +22,7 @@ function HeroSection() {
       <div className="hero-content-container">
         <div className="hero-content">
           <h1 className="hero-heading">
-            Sarjhapura's Best Hair Keratin Destination
+            Sarjapura's Best Hair Keratin Destination
           </h1>
           <div className="hero-ctas">
             <a

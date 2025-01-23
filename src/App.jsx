@@ -1,13 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./sass/main.sass";
-import LandingPage from "./components/LandingPage";
-import ContactForm from "./components/ContactForm";
-import { useState } from "react";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <>
-      <LandingPage></LandingPage>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Router>
   );
 }
 

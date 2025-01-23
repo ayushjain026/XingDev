@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png';
-function Footer() {
 
+function Footer({locationInfo}) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -13,12 +13,7 @@ function Footer() {
       <section className="footer">
         <div>
           <img src={logo} alt="" className="footer-logo" />
-          <p className="footer-address">
-          Xing Premium Unisex Salon, <br />
-          Opposite Clult PlayOn Fitness,<br />
-          71/1A, Samvit Greens,<br />
-          Sarjapur - Marathahalli Rd, <br />
-          opposite St. Peter's School, Kaikondrahalli, Bengaluru, Karnataka 560035
+          <p className="footer-address" dangerouslySetInnerHTML={{ __html: locationInfo?.location }}>
           </p>
         </div>
         <div className="footer-links">
@@ -58,7 +53,7 @@ function Footer() {
               xing.sarjapura@gmail.com
             </a>
             <a href="" className="footer-links-group-link">
-              +91 89-7000-7440
+              +91 {locationInfo?.phoneNumber}
             </a>
           </div>
         </div>
