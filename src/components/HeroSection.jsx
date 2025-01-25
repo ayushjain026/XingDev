@@ -1,7 +1,7 @@
 import Carousel from "./Carousel";
 import checkIcon from "../assets/hero-check.svg";
 
-function HeroSection() {
+function HeroSection({ locationInfo }) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -22,7 +22,7 @@ function HeroSection() {
       <div className="hero-content-container">
         <div className="hero-content">
           <h1 className="hero-heading">
-            Sarjapura's Best Hair Keratin Destination
+            {locationInfo.title} Best Hair Keratin Destination
           </h1>
           <div className="hero-ctas">
             <a

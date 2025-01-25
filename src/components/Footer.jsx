@@ -50,7 +50,7 @@ function Footer({locationInfo}) {
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Contact</h2>
             <a href="" className="footer-links-group-link">
-              xing.sarjapura@gmail.com
+              {locationInfo.email}
             </a>
             <a href="" className="footer-links-group-link">
               +91 {locationInfo?.phoneNumber}
