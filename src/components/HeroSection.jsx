@@ -22,7 +22,7 @@ function HeroSection({ locationInfo }) {
       <div className="hero-content-container">
         <div className="hero-content">
           <h1 className="hero-heading">
-            {locationInfo.title} Best Hair Keratin Destination
+            {locationInfo?.title} Best Hair Keratin Destination
           </h1>
           <div className="hero-ctas">
             <a
