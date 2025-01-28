@@ -66,12 +66,10 @@ function LandingPage() {
       <Navbar openModal={openModal} />
       <HeroSection locationInfo={dynamicProps} />
       <ServicesSection setIsOpen={setIsOpen} />
-
-      {/* Render ContactSection if location is valid */}
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} />}
-
       <ReviewsSection />
       <QnaSection />
+      
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}
