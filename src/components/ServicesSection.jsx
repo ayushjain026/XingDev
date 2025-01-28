@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import discountTag from "../assets/discount-tag.svg";
 import NanoPlastia from "../assets/NanoPlastiaService.jpeg";
 import HairKeratin from "../assets/HairKeratin.jpeg";
@@ -23,23 +25,24 @@ const carddata = [
 ];
 
 function ServicesSection({ setIsOpen }) {
-  const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
-const containerStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  margin: "20px 0",
-};
+  const isMobile = window.innerWidth <= 768;
 
-const textStyle = {
-  fontSize: isMobile ? "16px" : "18px",
-  color: "gray",
-  textAlign: "center",
-  lineHeight: "1.2",
-  margin: "5px 0",
-};
-  
+  const containerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    margin: "20px 0",
+  };
+
+  const textStyle = {
+    fontSize: isMobile ? "16px" : "18px",
+    color: "gray",
+    textAlign: "center",
+    lineHeight: "1.2",
+    margin: "5px 0",
+  };
+
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
@@ -67,6 +70,10 @@ const textStyle = {
   );
 }
 
+ServicesSection.propTypes = {
+  setIsOpen: PropTypes.func.isRequired,
+};
+
 export default ServicesSection;
 
 // ServiceCard Component
@@ -78,12 +85,6 @@ function ServiceCard({
   actualPrice,
   setIsOpen,
 }) {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
     <div className="services-cards-card">
       <img src={discountTag} alt="" className="services-cards-card-tag" />
@@ -100,12 +101,12 @@ function ServiceCard({
         }}
       >
         <img
-          src={heading == "Nanoplastia" ? NanoPlastia : HairKeratin}
-          alt="Nano Plastia"
+          src={heading === "Nanoplastia" ? NanoPlastia : HairKeratin}
+          alt="Service"
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover", // Ensures the image covers the container while maintaining aspect ratio
+            objectFit: "cover",
           }}
         />
       </div>
@@ -116,11 +117,14 @@ function ServiceCard({
           className="services-cards-card-des"
           style={{ fontSize: "18px", lineHeight: "1.5" }}
           dangerouslySetInnerHTML={{ __html: question }}
-        >
+        />
+        <p
+          className="services-cards-card-content-des"
+          dangerouslySetInnerHTML={{ __html: desc }}
+        />
+        <p className="services-cards-card-content-cutoutprice">
+          {cutoutPrice}
         </p>
-
-        <p className="services-cards-card-content-des" dangerouslySetInnerHTML={{ __html: desc }}></p>
-        <p className="services-cards-card-content-cutoutprice">{cutoutPrice}</p>
         <p className="services-cards-card-content-currentprice">
           {actualPrice}
         </p>
@@ -131,3 +135,12 @@ function ServiceCard({
     </div>
   );
 }
+
+ServiceCard.propTypes = {
+  heading: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  cutoutPrice: PropTypes.string.isRequired,
+  actualPrice: PropTypes.string.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+};
