@@ -11,7 +11,7 @@ import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
 
-function LandingPage() {
+function LandingPageOne() {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -92,4 +92,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default LandingPageOne;
