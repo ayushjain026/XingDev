@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <>
       <nav className="nav">
-        <img src={logo} alt="logo" srcset="" className="nav-logo" />
+        <img src={logo} alt="logo" srcSet="" className="nav-logo" />
         <div className="nav-links">
           <a onClick={() => (scrollToSection("services-section"))} className="nav-links-link">
             Service

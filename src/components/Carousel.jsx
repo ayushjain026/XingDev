@@ -6,10 +6,10 @@ function Carousel() {
   return (
     <section className="carousel">
       <div className="carousel-container">
-        <img src={imageOne} alt="" srcset="" className="carousel-img" />
-        <img src={imageTwo} alt="" srcset="" className="carousel-img" />
-        <img src={imageThree} alt="" srcset="" className="carousel-img" />
-        <img src={imageOne} alt="" srcset="" className="carousel-img" />
+        <img src={imageOne} alt="" srcSet="" className="carousel-img" />
+        <img src={imageTwo} alt="" srcSet="" className="carousel-img" />
+        <img src={imageThree} alt="" srcSet="" className="carousel-img" />
+        <img src={imageOne} alt="" srcSet="" className="carousel-img" />
       </div>
     </section>
   );
