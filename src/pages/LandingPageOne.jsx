@@ -38,7 +38,7 @@ function LandingPageOne() {
       mapLocation: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.621675304381!2d77.70912729999999!3d12.963452499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1309406c2c01%3A0x2eb6dc1b4d71e4b3!2sXing%20Premium%20Salon!5e1!3m2!1sen!2sin!4v1737650418906!5m2!1sen!2sin",
       whatsAppRedirectionUrl: "https://api.whatsapp.com/send/?phone=7996666012&text=I+want+to+avail+hair+offer&type=phone_number&app_absent=0"
     },
-    "hrs-layout": {
+    "hsr-layout": {
       title: "HSR Layout’s",
       email: "HSRXing@gmail.com",
       location: "Xing Premium Unisex Salon, <br /> 150/3, GSR Arcade, 9th Cross,<br /> 24th Main Rd,<br /> Bengaluru, Karnataka 560102",

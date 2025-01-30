@@ -1,5 +1,5 @@
 import { useState } from "react";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
 
 function ContactForm() {
   const gSheetUrl =
@@ -9,8 +9,9 @@ function ContactForm() {
   const [selectedService, setSelectedService] = useState("Hair Keratin");
 
   const SubmitData = (e) => {
+    e.preventDefault();
+    toast("Wow so easy!")
     if (userName && userNumber && selectedService) {
-      e.preventDefault();
       fetch(gSheetUrl, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -18,7 +19,6 @@ function ContactForm() {
       })
         .then((res) => res.text())
         .then((data) => {
-          alert(data);
           toast.success("We will contact you soon..!");
         })
         .catch((error) => console.log(error));
@@ -43,6 +43,7 @@ function ContactForm() {
             <p className="contact-form-input-lable">Your Name</p>
             <input
               required
+              value={userName}
               onChange={(e) => {
                 setUserName(e.target.value);
               }}
@@ -94,7 +95,7 @@ function ContactForm() {
             </select>
           </div>
         </div>
-        <button onSubmit={SubmitData} className="contact-cta">
+        <button onClick={SubmitData} className="contact-cta">
           Avail this Offer Now
         </button>
       </form>
