@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
-function ContactForm() {
+function ContactForm({offers}) {
   const gSheetUrl =
     "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
   const [userName, setUserName] = useState(null);
@@ -19,6 +19,7 @@ function ContactForm() {
       })
         .then((res) => res.text())
         .then((data) => {
+          alert("We will contact you soon..!");
           toast.success("We will contact you soon..!");
         })
         .catch((error) => console.log(error));
@@ -86,12 +87,11 @@ function ContactForm() {
                 outline: "none",
               }}
               className="contact-form-dropdown contact-form-input-field"
-            >
-              <option defaultChecked value="Hair Keratin">
-                Hair Keratin
+            >{offers?.map((offer, index) => (
+              <option key={index} value={offer} defaultChecked={index === 0}>
+                {offer}
               </option>
-              <option value="Nanoplastia">Nanoplastia</option>
-              <option value="others">others</option>
+            ))}
             </select>
           </div>
         </div>
