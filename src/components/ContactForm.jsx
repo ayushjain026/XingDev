@@ -8,6 +8,8 @@ function ContactForm({offers}) {
   const [userNumber, setUserNumber] = useState(null);
   const [selectedService, setSelectedService] = useState("Hair Keratin");
 
+  const offer = ["Hair Keratin", "Nanoplastia", "others"]
+
   const SubmitData = (e) => {
     e.preventDefault();
     toast("Wow so easy!")
