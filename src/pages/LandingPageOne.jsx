@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
-import ReviewsSection from "../components/ReviewsSection";
+import ReviewsSectionOne from "../components/ReviewsSectionOne";
 import QnaSection from "../components/QnaSection";
 import Footer from "../components/Footer";
 import { useState } from "react";
@@ -11,7 +11,7 @@ import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
 
-function LandingPageOne({locationPropsMap}) {
+const LandingPageOne = ({locationPropsMap}) => {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const offers = ["Hair Keratin", "Nanoplastia", "others"]
@@ -39,7 +39,7 @@ function LandingPageOne({locationPropsMap}) {
       <Navbar openModal={openModal} />
       <HeroSection locationInfo={dynamicProps} />
       <ServicesSection setIsOpen={setIsOpen} />
-      <ReviewsSection />
+      <ReviewsSectionOne />
       <QnaSection />
       
       {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}

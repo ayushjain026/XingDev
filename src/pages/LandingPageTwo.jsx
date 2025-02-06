@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import HeroSectionTwo from "../components/HeroSectionTwo";
 import ServicesSectionTwo from "../components/ServicesSectionTwo";
-import ReviewsSection from "../components/ReviewsSection";
+import ReviewsSectionTwo from "../components/ReviewsSectionTwo";
 import QnaSection from "../components/QnaSection";
 import Footer from "../components/Footer";
 import { useState } from "react";
@@ -41,7 +41,7 @@ function LandingPageOne({locationPropsMap}) {
       <Navbar openModal={openModal} />
       <HeroSectionTwo locationInfo={dynamicProps} />
       <ServicesSectionTwo setIsOpen={setIsOpen} />
-      <ReviewsSection />
+      <ReviewsSectionTwo />
       <QnaSection />
       
       {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
