@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/2",
+        "destination": "/2"
+      }
+    ]
+  }
+  
