@@ -34,9 +34,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        //<Route path="/" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
-        //<Route path="/1" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
-        <Route path="" element={<LandingPageTwo locationPropsMap={locationPropsMap} />} />
+        <Route path="/" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
+        <Route path="/1" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
+        <Route path="/2" element={<LandingPageTwo locationPropsMap={locationPropsMap} />} />
       </Routes>
     </Router>
   );
