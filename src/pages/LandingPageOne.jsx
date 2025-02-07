@@ -11,28 +11,25 @@ import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
 
-const LandingPageOne = ({locationPropsMap}) => {
+// eslint-disable-next-line react/prop-types
+const LandingPageOne = ({ locationPropsMap }) => {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const offers = ["Hair Keratin", "Nanoplastia", "others"]
+  const offers = ["Hair Keratin", "Nanoplastia", "Others"];
 
   // Get query parameters from the URL
   const getLocation = useLocation();
   const queryParams = new URLSearchParams(getLocation.search);
   const location = queryParams.get("location");
 
-  // Get the props for the current location
-  const dynamicProps = locationPropsMap[location];
+  // Set a default location if `location` is missing
+  const defaultLocation = "sarjapura"; // Change to any default
+  const dynamicProps = locationPropsMap[location] || locationPropsMap[defaultLocation];
 
   // Function to open modal
-  const openModal = () => {
-    setShowModal(true);
-  };
-
+  const openModal = () => setShowModal(true);
   // Function to close modal
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const closeModal = () => setShowModal(false);
 
   return (
     <>
@@ -41,7 +38,8 @@ const LandingPageOne = ({locationPropsMap}) => {
       <ServicesSection setIsOpen={setIsOpen} />
       <ReviewsSectionOne />
       <QnaSection />
-      
+
+      {/* Render Contact & Footer only when dynamicProps exists */}
       {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
@@ -49,20 +47,13 @@ const LandingPageOne = ({locationPropsMap}) => {
       {isOpen && (
         <div className="popup-container">
           <ContactForm offers={offers} />
-          <p
-            className="popup-close"
-            onClick={() => {
-              setIsOpen(false);
-            }}
-          >
-            X
-          </p>
+          <p className="popup-close" onClick={() => setIsOpen(false)}>X</p>
           <img src={logo} alt="logo" className="popup-logo" />
         </div>
       )}
       {showModal && <PopupFormModal closeModal={closeModal} />}
     </>
   );
-}
+};
 
 export default LandingPageOne;
