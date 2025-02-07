@@ -1,9 +1,6 @@
 {
-    "rewrites": [
-      {
-        "source": "/2",
-        "destination": "/2"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/1", "destination": "/1" },
+    { "source": "/2", "destination": "/2" }
+  ]
+}
