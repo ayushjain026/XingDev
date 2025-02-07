@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import HeroSectionTwo from "../components/HeroSectionTwo";
 import ServicesSectionTwo from "../components/ServicesSectionTwo";
 import ReviewsSectionTwo from "../components/ReviewsSectionTwo";
-import QnaSection from "../components/QnaSection";
+import QnaSectionTwo from "../components/QnaSectionTwo";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import PopupFormModal from "../components/PopupFormModule";
@@ -42,7 +42,7 @@ function LandingPageOne({locationPropsMap}) {
       <HeroSectionTwo locationInfo={dynamicProps} />
       <ServicesSectionTwo setIsOpen={setIsOpen} />
       <ReviewsSectionTwo />
-      <QnaSection />
+      <QnaSectionTwo />
       
       {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
