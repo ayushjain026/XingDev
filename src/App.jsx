@@ -32,7 +32,7 @@ function App() {
   };
   
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
         <Route path="/1" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
