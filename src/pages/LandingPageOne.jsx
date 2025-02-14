@@ -10,7 +10,7 @@ import ContactForm from "../components/ContactForm";
 import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
-import CarouselSection from "../components/CarouselSection";
+import CarouselSection1 from "../components/CarouselSection1";
 
 // eslint-disable-next-line react/prop-types
 const LandingPageOne = ({ locationPropsMap }) => {
@@ -37,7 +37,7 @@ const LandingPageOne = ({ locationPropsMap }) => {
       <Navbar openModal={openModal} />
       <HeroSection locationInfo={dynamicProps} />
       <ServicesSection setIsOpen={setIsOpen} />
-      <CarouselSection />
+      <CarouselSection1 />
       <ReviewsSectionOne />
       <QnaSection />
 

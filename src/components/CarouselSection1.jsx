@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import imageOne from '../assets/1.jpg';
-import imageTwo from '../assets/2.jpg';
-import imageThree from '../assets/3.jpg';
-import imageFour from '../assets/4.jpg';
-import imageFive from '../assets/5.jpg';
-import imageSix from '../assets/6.jpg';
-import imageSeven from '../assets/7.jpg';
-import imageEight from '../assets/8.jpg';
-import imageNine from '../assets/9.jpg';
+import imageOne from '../assets/ShopImages1/1.jpg';
+import imageTwo from '../assets/ShopImages1/2.jpg';
+import imageThree from '../assets/ShopImages1/3.jpg';
+import imageFour from '../assets/ShopImages1/4.jpg';
+import imageFive from '../assets/ShopImages1/5.jpg';
+import imageSix from '../assets/ShopImages1/6.jpg';
+import imageSeven from '../assets/ShopImages1/7.jpg';
+import imageEight from '../assets/ShopImages1/8.jpg';
+import imageNine from '../assets/ShopImages1/9.jpg';
 
-function CarouselSection() {
+function CarouselSection1() {
   // Array of images and current index
   const images = [
     imageOne,
@@ -134,4 +134,4 @@ function CarouselSection() {
   );
 }
 
-export default CarouselSection;
+export default CarouselSection1;

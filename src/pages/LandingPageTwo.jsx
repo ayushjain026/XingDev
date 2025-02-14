@@ -10,7 +10,7 @@ import ContactForm from "../components/ContactForm";
 import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
-import CarouselSection from "../components/CarouselSection";
+import CarouselSection2 from "../components/CarouselSection2";
 
 function LandingPageOne({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
@@ -42,6 +42,7 @@ function LandingPageOne({locationPropsMap}) {
       <Navbar openModal={openModal} />
       <HeroSectionTwo locationInfo={dynamicProps} />
       <ServicesSectionTwo setIsOpen={setIsOpen} />
+      <CarouselSection2 />
       <ReviewsSectionTwo />
       <QnaSectionTwo />
       
