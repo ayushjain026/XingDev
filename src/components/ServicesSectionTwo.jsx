@@ -1,79 +1,58 @@
 import PropTypes from "prop-types";
 import discountTag from "../assets/discount-tag.svg";
-import NanoPlastia from "../assets/NanoPlastiaService.jpeg";
-import HairKeratin from "../assets/HairKeratin.jpeg";
+import one from "../assets/serviceImages/11.jpeg";
+import two from "../assets/serviceImages/22.jpeg";
+import three from "../assets/serviceImages/33.jpeg";
+import four from "../assets/serviceImages/44.jpeg";
 
-const carddata = [
+const images = [one, two, three, four];
+
+const cardData = [
   {
-    heading: "Keratin Hair Treatment",
-    question: "Weak, Damaged, Unmanaged Hair ?",
-    description:
-      "Get <b>Upto 50% Off</b>: Keratin Treatment <b>@3999/-</b> 10000.",
-    cutoutPrice: "Rs. 9999",
-    currentPrice: "Rs. 4999",
-    imgUrl: "",
+    heading: "",
+    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b>',
+    description: "",
+    cutoutPrice: "₹ 9999",
+    currentPrice: "₹ 4499",
   },
   {
-    heading: "Keratin Hair Treatment",
-    question: "Weak, Damaged, Unmanaged Hair ?",
-    description:
-      "Get <b>Upto 50% Off</b>: Keratin Treatment <b>@3999/-</b> 10000.",
-    cutoutPrice: "Rs. 9999",
-    currentPrice: "Rs. 4999",
-    imgUrl: "",
+    heading: "",
+    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b>',
+    description: "",
+    cutoutPrice: "₹ 7999",
+    currentPrice: "₹ 2999",
   },
   {
-    heading: "Keratin Hair Treatment",
-    question: "Weak, Damaged, Unmanaged Hair ?",
-    description:
-      "Get <b>Upto 50% Off</b>: Keratin Treatment <b>@3999/-</b> 10000.",
-    cutoutPrice: "Rs. 9999",
-    currentPrice: "Rs. 4999",
-    imgUrl: "",
+    heading: "",
+    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>CRAZY HAIR COLOR</b>',
+    description: "",
+    cutoutPrice: "₹ 9999",
+    currentPrice: "₹ 4599",
   },
   {
-    heading: "Keratin Hair Treatment",
-    question: "Weak, Damaged, Unmanaged Hair ?",
-    description:
-      "Get <b>Upto 50% Off</b>: Keratin Treatment <b>@3999/-</b> 10000.",
-    cutoutPrice: "Rs. 9999",
-    currentPrice: "Rs. 4999",
-    imgUrl: "",
+    heading: "",
+    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR COLOR</b>',
+    description: "",
+    cutoutPrice: "₹ 9999",
+    currentPrice: "₹ 4999",
   },
 ];
 
 function ServicesSectionTwo({ setIsOpen }) {
-  const isMobile = window.innerWidth <= 768;
-
-  const containerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    margin: "20px 0",
-  };
-
-  const textStyle = {
-    fontSize: isMobile ? "16px" : "18px",
-    color: "gray",
-    textAlign: "center",
-    lineHeight: "1.2",
-    margin: "5px 0",
-  };
-
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="pri-text">Glam Up you Hair !! 
-        </span>
+        <span className="pri-text">Glam Up Your Hair!!</span>
         <br />
-        <div style={containerStyle}>
-          <h1 style={textStyle}>Non Damaging hair colors for outstanding transformations that will make you look great.</h1>
-          {/* <p style={textStyle}>Healthier hair with our hair treatments.</p> */}
+        <div className="services-intro">
+          <h1 className="services-description">
+            Non-damaging hair colors for outstanding transformations that will
+            make you look great.
+          </h1>
         </div>
       </h2>
       <div className="services-cards">
-        {carddata.map((service, index) => (
+        {cardData.map((service, index) => (
           <ServiceCard
             key={index}
             heading={service.heading}
@@ -81,6 +60,7 @@ function ServicesSectionTwo({ setIsOpen }) {
             desc={service.description}
             cutoutPrice={service.cutoutPrice}
             actualPrice={service.currentPrice}
+            imgUrl={images[index % images.length]} // Cycle through images
             setIsOpen={setIsOpen}
           />
         ))}
@@ -102,54 +82,47 @@ function ServiceCard({
   desc,
   cutoutPrice,
   actualPrice,
+  imgUrl,
   setIsOpen,
 }) {
   return (
     <div className="services-cards-card">
-      <img src={discountTag} alt="" className="services-cards-card-tag" />
+      {/* <img src={discountTag} alt="Discount" className="services-cards-card-tag" /> */}
       <div
         className="services-cards-card-img"
         style={{
           width: "100%",
-          height: "auto",
-          position: "relative",
-          overflow: "hidden",
+          height: "250px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          overflow: "hidden",
         }}
       >
         <img
-          src={heading === "Nanoplastia" ? NanoPlastia : HairKeratin}
+          src={imgUrl}
           alt="Service"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
-
       <div className="services-cards-card-content">
-        <h3 className="services-cards-card-content-heading">{heading}</h3>
+        {/* <h3 className="services-cards-card-content-heading">{heading}</h3> */}
         <p
           className="services-cards-card-des"
-          style={{ fontSize: "18px", lineHeight: "1.5" }}
+          style={{ fontSize: "18px" }}
           dangerouslySetInnerHTML={{ __html: question }}
         />
         <p
           className="services-cards-card-content-des"
           dangerouslySetInnerHTML={{ __html: desc }}
         />
-        <p className="services-cards-card-content-cutoutprice">
-          {cutoutPrice}
-        </p>
+        <p className="services-cards-card-content-cutoutprice">{cutoutPrice}</p>
         <p className="services-cards-card-content-currentprice">
           {actualPrice}
         </p>
-        <a className="hero-cta" onClick={() => setIsOpen(true)}>
+        <button className="hero-cta" onClick={() => setIsOpen(true)}>
           Avail this Offer Now
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -161,5 +134,6 @@ ServiceCard.propTypes = {
   desc: PropTypes.string.isRequired,
   cutoutPrice: PropTypes.string.isRequired,
   actualPrice: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
   setIsOpen: PropTypes.func.isRequired,
 };
