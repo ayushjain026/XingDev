@@ -10,6 +10,7 @@ import ContactForm from "../components/ContactForm";
 import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
+import CarouselSection from "../components/CarouselSection";
 
 function LandingPageOne({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);

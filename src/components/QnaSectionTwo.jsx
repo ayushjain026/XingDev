@@ -50,7 +50,7 @@ function QnaSectionTwo() {
     <section className="qna">
       <h2 className="qna-heading">Frequently Asked Questions</h2>
       <p className="qna-subheading">
-        Here are the top 6 frequently asked questions (FAQs) about hair keratin
+        Here are the top {accordionData.length} frequently asked questions (FAQs) about hair keratin
         treatments and nanoplastia:
       </p>
 
