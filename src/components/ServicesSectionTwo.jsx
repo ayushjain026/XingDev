@@ -95,7 +95,7 @@ function ServiceCard({
         className="services-cards-card-img"
         style={{
           width: "100%",
-          height: "250px",
+          height: "350px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -109,7 +109,7 @@ function ServiceCard({
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "contain", // Ensures the full image is visible
+            objectFit: "cover", // Ensures the full image is visible
           }}
         />
       </div>
