@@ -10,28 +10,32 @@ const images = [one, two, three, four];
 const cardData = [
   {
     heading: "",
-    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b>',
+    question:
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b>',
     description: "",
     cutoutPrice: "₹ 9999",
     currentPrice: "₹ 4499",
   },
   {
     heading: "",
-    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b>',
+    question:
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b>',
     description: "",
     cutoutPrice: "₹ 7999",
     currentPrice: "₹ 2999",
   },
   {
     heading: "",
-    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>CRAZY HAIR COLOR</b>',
+    question:
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>CRAZY HAIR COLOR</b>',
     description: "",
     cutoutPrice: "₹ 9999",
     currentPrice: "₹ 4599",
   },
   {
     heading: "",
-    question: 'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR COLOR</b>',
+    question:
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR COLOR</b>',
     description: "",
     cutoutPrice: "₹ 9999",
     currentPrice: "₹ 4999",
@@ -87,7 +91,6 @@ function ServiceCard({
 }) {
   return (
     <div className="services-cards-card">
-      {/* <img src={discountTag} alt="Discount" className="services-cards-card-tag" /> */}
       <div
         className="services-cards-card-img"
         style={{
@@ -97,14 +100,20 @@ function ServiceCard({
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
+          backgroundColor: "#fff", // Optional: Helps with image clarity
         }}
       >
         <img
           src={imgUrl}
           alt="Service"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain", // Ensures the full image is visible
+          }}
         />
       </div>
+
       <div className="services-cards-card-content">
         {/* <h3 className="services-cards-card-content-heading">{heading}</h3> */}
         <p
@@ -113,13 +122,18 @@ function ServiceCard({
           dangerouslySetInnerHTML={{ __html: question }}
         />
         <p
-          className="services-cards-card-content-des"
-          dangerouslySetInnerHTML={{ __html: desc }}
-        />
-        <p className="services-cards-card-content-cutoutprice">{cutoutPrice}</p>
-        <p className="services-cards-card-content-currentprice">
+          className="services-cards-card-content-cutoutprice"
+          style={{ marginBottom: "5px", padding: "0" }}
+        >
+          {cutoutPrice}
+        </p>
+        <p
+          className="services-cards-card-content-currentprice"
+          style={{ marginBottom: "10px", padding: "0" }}
+        >
           {actualPrice}
         </p>
+
         <button className="hero-cta" onClick={() => setIsOpen(true)}>
           Avail this Offer Now
         </button>

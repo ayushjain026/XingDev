@@ -3,13 +3,14 @@ import r21 from "../assets/reviews/PageTwo/r21.jpeg";
 import r22 from "../assets/reviews/PageTwo/r22.jpeg";
 import r23 from "../assets/reviews/PageTwo/r23.jpeg";
 import r24 from "../assets/reviews/PageTwo/r24.jpeg";
-import r3 from "../assets/reviews/PageOne/r3.jpeg";
-import r4 from "../assets/reviews/PageOne/r4.jpeg";
-import r5 from "../assets/reviews/PageOne/r5.jpeg";
-import r6 from "../assets/reviews/PageOne/r6.jpeg";
-import r1 from "../assets/reviews/PageOne/r1.jpeg";
-import r7 from "../assets/reviews/PageOne/r7.jpeg";
-const images = [r21, r22, r23, r24, r1, r3, r4, r5, r6, r7]; // Store images in an array
+import r25 from "../assets/reviews/PageTwo/r25.jpeg";
+// import r3 from "../assets/reviews/PageOne/r3.jpeg";
+// import r4 from "../assets/reviews/PageOne/r4.jpeg";
+// import r5 from "../assets/reviews/PageOne/r5.jpeg";
+// import r6 from "../assets/reviews/PageOne/r6.jpeg";
+// import r1 from "../assets/reviews/PageOne/r1.jpeg";
+// import r7 from "../assets/reviews/PageOne/r7.jpeg";
+const images = [r21, r22, r23, r24, r25]; // Store images in an array
 
 const ReviewsSectionTwo = () => {
   return (
@@ -54,14 +55,17 @@ const ReviewsSectionTwo = () => {
 const ReviewImageCard = (image) => {
   return (
     <div
-      className="reviews-cards-card"
-      style={{
-        width: "350px",
-        height: "300px",
-        overflow: "hidden",
-        borderRadius: "8px",
-        border: "1px solid #ddd",
-        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+    className="reviews-cards-card"
+    style={{
+      width: "350px",
+      height: "300px",
+      overflow: "hidden",
+      borderRadius: "8px",
+      border: "1px solid #ddd",
+      boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       }}
     >
       <div

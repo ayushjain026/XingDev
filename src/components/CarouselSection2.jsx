@@ -12,15 +12,15 @@ import imageNine from '../assets/ShopImages2/9.jpeg';
 function CarouselSection2() {
   // Array of images and current index
   const images = [
-    imageOne,
     imageTwo,
     imageThree,
-    imageFour,
     imageFive,
     imageSix,
     imageSeven,
     imageEight,
+    imageFour,
     imageNine,
+    imageOne,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
