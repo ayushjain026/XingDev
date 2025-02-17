@@ -43,13 +43,30 @@ const cardData = [
 ];
 
 function ServicesSectionTwo({ setIsOpen }) {
+  const isMobile = window.innerWidth <= 768;
+  const containerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    margin: "20px 0",
+  };
+
+  const textStyle = {
+    fontSize: isMobile ? "16px" : "18px",
+    color: "gray",
+    textAlign: "center",
+    lineHeight: "1.2",
+    margin: "5px 0",
+  };
+
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
         <span className="pri-text">Glam Up Your Hair!!</span>
         <br />
-        <div className="services-intro">
-          <h1 className="services-description">
+        <div style={containerStyle}>
+          <h1 style={textStyle}>
             Non-damaging hair colors for outstanding transformations that will
             make you look great.
           </h1>
