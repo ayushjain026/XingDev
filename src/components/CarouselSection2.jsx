@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import imageOne from '../assets/ShopImages2/1.jpeg';
 import imageTwo from '../assets/ShopImages2/2.jpeg';
 import imageThree from '../assets/ShopImages2/3.jpeg';
@@ -25,6 +25,13 @@ function CarouselSection2() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
