@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import imageOne from '../assets/ShopImages2/1.jpeg';
 import imageTwo from '../assets/ShopImages2/2.jpeg';
 import imageThree from '../assets/ShopImages2/3.jpeg';
@@ -10,7 +10,6 @@ import imageEight from '../assets/ShopImages2/8.jpeg';
 import imageNine from '../assets/ShopImages2/9.jpeg';
 
 function CarouselSection2() {
-  // Array of images and current index
   const images = [
     imageTwo,
     imageThree,
@@ -24,20 +23,37 @@ function CarouselSection2() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
-  // Navigate to the next image
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
   };
 
-  // Navigate to the previous image
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current && touchEndX.current) {
+      const diff = touchStartX.current - touchEndX.current;
+      if (diff > 50) {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      } else if (diff < -50) {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
   };
 
   return (
-    <section className="unique-carousel">
-      {/* Displaying the current image */}
+    <section
+      className="unique-carousel"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="unique-carousel-image-container">
         <img
           src={images[currentIndex]}
@@ -46,15 +62,6 @@ function CarouselSection2() {
         />
       </div>
 
-      {/* Navigation Buttons */}
-      <button className="unique-carousel-button unique-prev" onClick={prevImage}>
-        &#8249; {/* Left arrow */}
-      </button>
-      <button className="unique-carousel-button unique-next" onClick={nextImage}>
-        &#8250; {/* Right arrow */}
-      </button>
-
-      {/* Indicators */}
       <div className="unique-carousel-indicators">
         {images.map((_, index) => (
           <span
@@ -65,12 +72,11 @@ function CarouselSection2() {
         ))}
       </div>
 
-      {/* Styles */}
       <style>{`
         .unique-carousel {
           position: relative;
           width: 100%;
-          height: 100vh; /* Full height viewport */
+          height: 100vh;
           overflow: hidden;
         }
 
@@ -85,28 +91,7 @@ function CarouselSection2() {
         .unique-carousel-img {
           max-width: 100%;
           max-height: 100%;
-          object-fit: contain; /* Ensures the entire image is visible */
-        }
-
-        .unique-carousel-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(0, 0, 0, 0.5);
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          cursor: pointer;
-          font-size: 24px;
-          z-index: 10;
-        }
-
-        .unique-carousel-button.unique-prev {
-          left: 20px;
-        }
-
-        .unique-carousel-button.unique-next {
-          right: 20px;
+          object-fit: contain;
         }
 
         .unique-carousel-indicators {

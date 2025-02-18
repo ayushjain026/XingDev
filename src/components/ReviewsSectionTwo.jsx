@@ -4,14 +4,9 @@ import r22 from "../assets/reviews/PageTwo/r22.jpeg";
 import r23 from "../assets/reviews/PageTwo/r23.jpeg";
 import r24 from "../assets/reviews/PageTwo/r24.jpeg";
 import r25 from "../assets/reviews/PageTwo/r25.jpeg";
-// import r3 from "../assets/reviews/PageOne/r3.jpeg";
-// import r4 from "../assets/reviews/PageOne/r4.jpeg";
-// import r5 from "../assets/reviews/PageOne/r5.jpeg";
-// import r6 from "../assets/reviews/PageOne/r6.jpeg";
-// import r1 from "../assets/reviews/PageOne/r1.jpeg";
-// import r7 from "../assets/reviews/PageOne/r7.jpeg";
-const images = [r21, r22, r23, r24, r25]; // Store images in an array
 
+const images = [r21, r22, r23, r24, r25]; 
+  
 const ReviewsSectionTwo = () => {
   return (
     <section id="review-section" className="reviews">
