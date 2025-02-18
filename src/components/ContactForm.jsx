@@ -8,8 +8,6 @@ function ContactForm({offers}) {
   const [userNumber, setUserNumber] = useState(null);
   const [selectedService, setSelectedService] = useState("Hair Keratin");
 
-  const offer = ["Hair Keratin", "Nanoplastia", "others"]
-
   const SubmitData = (e) => {
     e.preventDefault();
     toast("Wow so easy!")
@@ -56,22 +54,26 @@ function ContactForm({offers}) {
             />
           </div>
           <div>
-            <p className="contact-form-input-lable">Phone Number</p>
+            <p className="contact-form-input-label">Phone Number</p>
             <input
               required
               onChange={(e) => {
                 const value = e.target.value;
-                // Allow only numbers and restrict to 10 digits
-                if (value.length < 11 && /^[0-9]*$/.test(value)) {
+                // Indian phone number regex: Starts with 6-9 and has exactly 10 digits
+                const indianNumberRegex = /^[6-9][0-9]{0,9}$/;
+                if (indianNumberRegex.test(value)) {
                   setUserNumber(value);
                 }
               }}
               value={userNumber}
-              type="number"
+              type="tel" // 'tel' is better for mobile keyboards
+              pattern="[6-9]{1}[0-9]{9}" // Ensures proper validation
+              maxLength="10"
               style={{ width: "100%" }}
               className="contact-form-input-field"
             />
           </div>
+
           <div className="contact-form-input-group">
             <br />
             <p className="contact-form-input-lable">Select your Service</p>
