@@ -1,105 +1,174 @@
-import { useState } from "react";
-import { toast } from 'react-toastify';
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
-function ContactForm({offers}) {
+function ContactForm({ offers }) {
   const gSheetUrl =
     "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
-  const [userName, setUserName] = useState(null);
-  const [userNumber, setUserNumber] = useState(null);
-  const [selectedService, setSelectedService] = useState("Hair Keratin");
+
+  const [userName, setUserName] = useState("");
+  const [userNumber, setUserNumber] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [selectedService, setSelectedService] = useState(
+    offers?.[0] || "Hair Keratin"
+  );
+
+  const [errors, setErrors] = useState({
+    userName: "",
+    userNumber: "",
+    selectedService: "",
+  });
+
+  useEffect(() => {
+    setErrors({
+      userName: "",
+      userNumber: "",
+      selectedService: "",
+    });
+    setSuccessMessage("");
+  }, []);
+
+  const validateForm = () => {
+    let isValid = true;
+    let newErrors = { userName: "", userNumber: "", selectedService: "" };
+
+    if (!userName.trim()) {
+      newErrors.userName = "Name is required.";
+      isValid = false;
+    }
+    if (!userNumber.trim()) {
+      newErrors.userNumber = "Phone number is required.";
+      isValid = false;
+    } else if (!/^[6-9][0-9]{9}$/.test(userNumber)) {
+      newErrors.userNumber = "Enter a valid 10-digit Indian phone number.";
+      isValid = false;
+    }
+    if (!selectedService) {
+      newErrors.selectedService = "Please select a service.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const SubmitData = (e) => {
     e.preventDefault();
-    toast("Wow so easy!")
-    if (userName && userNumber && selectedService) {
-      fetch(gSheetUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `Name=${userName}&Email=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}`,
-      })
-        .then((res) => res.text())
-        .then((data) => {
-          alert("We will contact you soon..!");
-          toast.success("We will contact you soon..!");
-        })
-        .catch((error) => console.log(error));
 
-      setUserName(null);
-      setUserNumber(null);
-    } else {
-      toast.error("Please fill all required fields");
+    if (!validateForm()) {
+      toast.error("Please fill all required fields correctly.");
+      return;
     }
+
+    fetch(gSheetUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `Name=${userName}&Phone=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}`,
+    })
+      .then((res) => res.text())
+      .then(() => {
+        toast.success("We will contact you soon!");
+        setUserName("");
+        setUserNumber("");
+        setSelectedService(offers?.[0] || "Hair Keratin");
+        setErrors({ userName: "", userNumber: "", selectedService: "" });
+        setSuccessMessage("Thank you soo much, we will contact you soon!");
+        // Remove the success message after 10 seconds
+        
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 5000);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
     <div id="personalized-treatment" className="contact-form">
-      <h4 className="contact-form-heading">Get Personalized hair Treatement</h4>
+      <h4 className="contact-form-heading">Get Personalized Hair Treatment</h4>
       <p className="contact-form-subheading">
         Our expert stylists are dedicated to restoring your hair’s vitality,
         ensuring you leave our salon feeling radiant and confident.
       </p>
-      <form>
-        <div>
-          <div className="contact-form-input-group">
-            <p className="contact-form-input-lable">Your Name</p>
-            <input
-              required
-              value={userName}
-              onChange={(e) => {
-                setUserName(e.target.value);
-              }}
-              type="text"
-              style={{ width: "100%" }}
-              className="contact-form-input-field"
-            />
-          </div>
-          <div>
-            <p className="contact-form-input-label">Phone Number</p>
-            <input
-              required
-              onChange={(e) => {
-                const value = e.target.value;
-                // Indian phone number regex: Starts with 6-9 and has exactly 10 digits
-                const indianNumberRegex = /^[6-9][0-9]{0,9}$/;
-                if (indianNumberRegex.test(value)) {
-                  setUserNumber(value);
-                }
-              }}
-              value={userNumber}
-              type="tel" // 'tel' is better for mobile keyboards
-              pattern="[6-9]{1}[0-9]{9}" // Ensures proper validation
-              maxLength="10"
-              style={{ width: "100%" }}
-              className="contact-form-input-field"
-            />
-          </div>
 
-          <div className="contact-form-input-group">
-            <br />
-            <p className="contact-form-input-lable">Select your Service</p>
-            <select
-              required
-              onChange={(e) => {
-                setSelectedService(e.target.value);
-              }}
-              style={{
-                width: "100%",
-                padding: "1rem 1.2rem",
-                border: "1px solid #ccc",
-                borderRadius: "4px",
-                background: "#fff",
-                outline: "none",
-              }}
-              className="contact-form-dropdown contact-form-input-field"
-            >{offers?.map((offer, index) => (
-              <option key={index} value={offer} defaultChecked={index === 0}>
+      {/* Success Message */}
+      {successMessage && (
+        <div
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            color: "white",
+            padding: "20px 40px",
+            borderRadius: "10px",
+            fontSize: "1.5rem",
+            textAlign: "center",
+            zIndex: "9999",
+          }}
+        >
+          {successMessage}
+        </div>
+      )}
+
+      <form onSubmit={SubmitData}>
+        <div className="contact-form-input-group">
+          <p className="contact-form-input-label">Your Name</p>
+          <input
+            required
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            type="text"
+            className="contact-form-input-field"
+            style={{ width: "100%" }}
+          />
+          {errors.userName && <p className="error-text">{errors.userName}</p>}
+        </div>
+
+        <div className="contact-form-input-group">
+          <p className="contact-form-input-label">Phone Number</p>
+          <input
+            required
+            value={userNumber}
+            onChange={(e) => setUserNumber(e.target.value)}
+            type="tel"
+            pattern="[6-9]{1}[0-9]{9}"
+            maxLength="10"
+            className="contact-form-input-field"
+            style={{ width: "100%" }}
+          />
+          {errors.userNumber && (
+            <p className="error-text">{errors.userNumber}</p>
+          )}
+        </div>
+
+        <div className="contact-form-input-group">
+          <p className="contact-form-input-label">Select your Service</p>
+          <select
+            required
+            value={selectedService}
+            onChange={(e) => setSelectedService(e.target.value)}
+            className="contact-form-dropdown contact-form-input-field"
+            style={{
+              width: "100%",
+              padding: "1rem 1.2rem",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              background: "#fff",
+              outline: "none",
+            }}
+          >
+            {offers?.map((offer, index) => (
+              <option key={index} value={offer}>
                 {offer}
               </option>
             ))}
-            </select>
-          </div>
+          </select>
+          {errors.selectedService && (
+            <p className="error-text">{errors.selectedService}</p>
+          )}
         </div>
-        <button onClick={SubmitData} className="contact-cta">
+
+        <button type="submit" className="contact-cta">
           Avail this Offer Now
         </button>
       </form>
