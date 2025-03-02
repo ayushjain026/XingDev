@@ -72,12 +72,11 @@ function ServicesSectionThree({ setIsOpen }) {
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="pri-text">Glam Up Your Hair!!</span>
+        <span className="pri-text">Wear Your Story!</span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>
-            Non-damaging hair colors for outstanding transformations that will
-            make you look great.
+            Dare to be bold! Elevate your style with trendy, non-permanent tattoos—zero commitment, all the impact. Try it, love it, change it!
           </h1>
         </div>
       </h2>

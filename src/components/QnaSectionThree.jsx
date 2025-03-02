@@ -64,8 +64,7 @@ function QnaSectionThree() {
     <section className="qna">
       <h2 className="qna-heading">Frequently Asked Questions</h2>
       <p className="qna-subheading">
-        Here are the top {accordionData.length} frequently asked questions (FAQs) about hair keratin
-        treatments and nanoplastia:
+        Here are the top {accordionData.length} frequently asked questions (FAQs) about Tattoos!
       </p>
 
       {accordionData.map((item, index) => (
