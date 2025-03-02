@@ -66,7 +66,7 @@ function HeroSectionThree({ locationInfo }) {
                 5000+ 
               </p>
               <p className="hero-stats-des" style={{ color: "white" }}>
-                Hair Trasformations Delivered 
+                Tattoos Delivered 
               </p>
             </div>
             <div>
