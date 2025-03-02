@@ -19,7 +19,7 @@ function LandingPageThree() {
 
   const locationPropsMap = {
     "aecs-layout": {
-      title: "Whitefiled's",
+      title: "Whitefield's",
       email: "Xing.Aecs@gmail.com",
       location: "1st floor, Number 267, SV Plaza, <br />60 Feet Rd, AECS Layout - A Block, <br />AECS Layout, Marathahalli, Bengaluru, Karnataka 560037",
       phoneNumber: "79966-66012",
