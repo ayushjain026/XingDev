@@ -7,10 +7,8 @@ import HairKeratin from "../assets/HairKeratin.jpeg";
 const carddata = [
   {
     heading: "Keratin Hair Treatment",
-    heading: "Keratin Hair Treatment",
     question: "Weak, Damaged, Unmanaged Hair ?",
     description:
-      "We got you covered ! Choose our Keratin Treatment at <b>50% OFF</b> which infuse Keratin in your hair for the natural shine and outstanding glow. ",
       "We got you covered ! Choose our Keratin Treatment at <b>50% OFF</b> which infuse Keratin in your hair for the natural shine and outstanding glow. ",
     cutoutPrice: "Rs. 9999",
     currentPrice: "Rs. 4999",
@@ -20,7 +18,6 @@ const carddata = [
     heading: "Nanoplastia",
     question: "Frizzy, Dull Hair, Tangled Hair <br />We got you covered !",
     description:
-      "Nanplastia is one of the most advanced Hair treatment, which regular straightening manages your hair, Nanoplastia infuses protine and brings nearly 80% of the straightening effect. <br />Choose our Nanoplastia Treatment at <b>50% OFF</b> for straightening, shiny, Gorgeous hair.",
       "Nanplastia is one of the most advanced Hair treatment, which regular straightening manages your hair, Nanoplastia infuses protine and brings nearly 80% of the straightening effect. <br />Choose our Nanoplastia Treatment at <b>50% OFF</b> for straightening, shiny, Gorgeous hair.",
     cutoutPrice: "Rs. 13999",
     currentPrice: "Rs. 6999",
@@ -51,10 +48,6 @@ function ServicesSection({ setIsOpen }) {
       <h2 className="services-heading">
         <span className="pri-text">Get Shine on Your Hair</span>
         <br />
-        <div style={containerStyle}>
-          <h1 style={textStyle}>Smoother, Stronger, Shiny, Frizz-Free</h1>
-          <p style={textStyle}>Healthier hair with our hair treatments.</p>
-        </div>
         <div style={containerStyle}>
           <h1 style={textStyle}>Smoother, Stronger, Shiny, Frizz-Free</h1>
           <p style={textStyle}>Healthier hair with our hair treatments.</p>

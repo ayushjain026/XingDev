@@ -37,7 +37,7 @@ function Footer({ locationInfo }) {
           </div>
         </div>
       </section>
-      <p className="copyright">© 2024 XING Salons. All rights reserved.</p>
+      <p className="copyright">© 2025 XING Salons. All rights reserved.</p>
 
       <style>{`
         .footer-links {
