@@ -3,13 +3,21 @@ import imageOne from '../assets/ShopImages3/1.jpeg';
 import imageTwo from '../assets/ShopImages3/2.jpeg';
 import imageThree from '../assets/ShopImages3/3.jpeg';
 import imageFour from '../assets/ShopImages3/4.jpeg';
+import imageFive from '../assets/ShopImages3/5.jpeg';
+import imageSix from '../assets/ShopImages3/6.jpeg';
+import imageSeven from '../assets/ShopImages3/7.jpeg';
+import imageEight from '../assets/ShopImages3/7.jpeg';
 
 function CarouselSection3() {
   const images = [
     imageOne,
     imageTwo,
     imageThree,
-    imageFour
+    imageFour,
+    imageFive,
+    imageSix,
+    imageSeven,
+    imageEight,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
