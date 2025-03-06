@@ -55,7 +55,7 @@ function LandingPageThree() {
       <ReviewsSectionThree />
       <QnaSectionThree />
       
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName={"Get Custom Tattoo Designs"} />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}

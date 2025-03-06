@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-function ContactForm({ offers }) {
+function ContactForm({ offers, pageName="" }) {
   const gSheetUrl =
     "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
 
@@ -83,7 +83,7 @@ function ContactForm({ offers }) {
 
   return (
     <div id="personalized-treatment" className="contact-form">
-      <h4 className="contact-form-heading">Get Personalized Hair Treatment</h4>
+      <h4 className="contact-form-heading">{pageName}</h4>
       <p className="contact-form-subheading">
         Our expert stylists are dedicated to restoring your hair’s vitality,
         ensuring you leave our salon feeling radiant and confident.

@@ -42,7 +42,7 @@ const LandingPageOne = ({ locationPropsMap }) => {
       <QnaSection />
 
       {/* Render Contact & Footer only when dynamicProps exists */}
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName={"Get Personalized Hair Treatment"}/>}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}

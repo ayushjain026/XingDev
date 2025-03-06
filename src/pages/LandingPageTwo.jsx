@@ -46,7 +46,7 @@ function LandingPageTwo({locationPropsMap}) {
       <ReviewsSectionTwo />
       <QnaSectionTwo />
       
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} />}
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Customize Your Perfect Hair Color" />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}

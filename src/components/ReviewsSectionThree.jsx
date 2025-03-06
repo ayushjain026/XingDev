@@ -6,8 +6,11 @@ import r4 from "../assets/reviews/PageThree/4.png";
 import r5 from "../assets/reviews/PageThree/5.png";
 import r6 from "../assets/reviews/PageThree/6.png";
 import r7 from "../assets/reviews/PageThree/7.png";
+import r8 from "../assets/reviews/PageThree/8.png";
+import r9 from "../assets/reviews/PageThree/9.png";
+import r10 from "../assets/reviews/PageThree/10.png";
 
-const images = [r1, r3, r2, r4, r5, r6, r7]; 
+const images = [r1, r2, r8, r9, r10, r5, r6, r7, r4, r3]; 
   
 const ReviewsSectionTwo = () => {
   return (

@@ -1,6 +1,6 @@
 import ContactForm from "./ContactForm";
 
-function ContactSection({locationInfo, offers}) {
+function ContactSection({locationInfo, offers, pageName=""}) {
   return (
     <section id="contact section" className="contact section">
       <div className="contact-map">
@@ -34,7 +34,7 @@ function ContactSection({locationInfo, offers}) {
           <p className="contact-location-address">+91 {locationInfo?.phoneNumber}</p>
         </div>
       </div>
-      <ContactForm offers={offers} />
+      <ContactForm offers={offers} pageName={pageName}/>
     </section>
   );
 }
