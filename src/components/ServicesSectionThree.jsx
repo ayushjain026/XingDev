@@ -6,17 +6,9 @@ import three from "../assets/serviceImages/Offer3/3.jpeg";
 import four from "../assets/serviceImages/Offer3/4.jpeg";
 import five from "../assets/serviceImages/Offer3/5.jpeg";
 
-const images = [one, two, four];
+const images = [two, one, four];
 
 const cardData = [
-  {
-    heading: "",
-    question:
-      'Vibrant color tattoos at ₹399 per inch – let your ink shine!',
-    description: "",
-    cutoutPrice: "₹ 500",
-    currentPrice: "₹ 399",
-  },
   {
     heading: "",
     question:
@@ -25,7 +17,14 @@ const cardData = [
     cutoutPrice: "₹ 599",
     currentPrice: "₹ 299",
   },
- 
+  {
+    heading: "",
+    question:
+      'Vibrant color tattoos at ₹399 per inch – let your ink shine!',
+    description: "",
+    cutoutPrice: "₹ 500",
+    currentPrice: "₹ 399",
+  },
   {
     heading: "",
     question:
