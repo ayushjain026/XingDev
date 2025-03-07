@@ -58,7 +58,7 @@ const ReviewImageCard = (image) => {
     className="reviews-cards-card"
     style={{
       width: "350px",
-      height: "300px",
+      height: "270px",
       overflow: "hidden",
       borderRadius: "8px",
       border: "1px solid #ddd",
