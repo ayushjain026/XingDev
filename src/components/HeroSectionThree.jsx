@@ -55,6 +55,12 @@ function HeroSectionThree({ locationInfo }) {
             <div className="hero-checks-check">
               <img src={checkIcon} alt="" className="hero-checks-check-icon" />
               <p className="hero-checks-check-text" style={{ color: "white" }}>
+                Expert Tattoo artist with 12+ years of experience.
+              </p>
+            </div>
+            <div className="hero-checks-check">
+              <img src={checkIcon} alt="" className="hero-checks-check-icon" />
+              <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Premium Service starting from
                 <span className="pri-text"> Rs. 299 Only</span>
               </p>
@@ -63,7 +69,7 @@ function HeroSectionThree({ locationInfo }) {
           <div className="hero-stats">
             <div>
               <p className="hero-stats-num" style={{ color: "white" }}>
-                5000+ 
+                1000+ 
               </p>
               <p className="hero-stats-des" style={{ color: "white" }}>
                 Tattoos Delivered 
