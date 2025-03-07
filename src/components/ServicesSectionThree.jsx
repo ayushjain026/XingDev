@@ -23,7 +23,7 @@ const cardData = [
       'The bigger the tattoo, the bigger the discount – ink more, save more!',
     description: "",
     cutoutPrice: "₹ 599",
-    currentPrice: "₹ 299",
+    currentPrice: "₹ 399",
   },
   {
     heading: "",
@@ -37,14 +37,6 @@ const cardData = [
     heading: "",
     question:
       'Express yourself with any tattoo up to 10 inches for just ₹2500!',
-    description: "",
-    cutoutPrice: "₹ 3000",
-    currentPrice: "₹ 2599",
-  },
-  {
-    heading: "",
-    question:
-      'Bold, intricate, and timeless – get the perfect tattoo for you!',
     description: "",
     cutoutPrice: "₹ 3000",
     currentPrice: "₹ 2599",
@@ -63,16 +55,18 @@ function ServicesSectionThree({ setIsOpen }) {
 
   const textStyle = {
     fontSize: isMobile ? "16px" : "18px",
-    color: "gray",
+    color: "#2F2F3C",
     textAlign: "center",
+    fontWeight: "400",
     lineHeight: "1.2",
+    letterSpacing: "1.2px",
     margin: "5px 0",
   };
 
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="pri-text">Wear Your Story!</span>
+        <span className="gradient-heading">Wear Your Story!</span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>
@@ -120,7 +114,7 @@ function ServiceCard({
         className="services-cards-card-img"
         style={{
           width: "100%",
-          height: "350px",
+          height: "420px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -142,19 +136,16 @@ function ServiceCard({
       <div className="services-cards-card-content">
         {/* <h3 className="services-cards-card-content-heading">{heading}</h3> */}
         <p
-          className="services-cards-card-des"
-          style={{ fontSize: "18px" }}
+          className="services-cards-card-content-des"
           dangerouslySetInnerHTML={{ __html: question }}
         />
         <p
           className="services-cards-card-content-cutoutprice"
-          style={{ marginBottom: "5px", padding: "0" }}
         >
           {cutoutPrice}
         </p>
         <p
           className="services-cards-card-content-currentprice"
-          style={{ marginBottom: "10px", padding: "0" }}
         >
           {actualPrice}
         </p>
