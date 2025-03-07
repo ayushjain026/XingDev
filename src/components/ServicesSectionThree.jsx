@@ -67,11 +67,11 @@ function ServicesSectionThree({ setIsOpen }) {
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="gradient-heading">Wear Your Story!</span>
+        <span className="gradient-heading"> From Vision to Reality - Tattoos Crafted with Passion </span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>
-            Dare to be bold! Elevate your style with trendy, non-permanent tattoos—zero commitment, all the impact. Try it, love it, change it!
+            We turn your ideas into stunning works of body art. Let us create a tattoo that reflects your personality and passion.
           </h1>
         </div>
       </h2>
