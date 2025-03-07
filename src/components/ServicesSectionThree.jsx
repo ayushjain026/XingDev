@@ -23,7 +23,7 @@ const cardData = [
       'The bigger the tattoo, the bigger the discount – ink more, save more!',
     description: "",
     cutoutPrice: "₹ 599",
-    currentPrice: "₹ 399",
+    currentPrice: "₹ 299",
   },
  
   {
@@ -32,7 +32,7 @@ const cardData = [
       'Express yourself with any tattoo up to 10 inches for just ₹2500!',
     description: "",
     cutoutPrice: "₹ 3000",
-    currentPrice: "₹ 2599",
+    currentPrice: "₹ 2500",
   },
   // {
   //   heading: "",
