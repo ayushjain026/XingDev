@@ -112,15 +112,7 @@ function ServiceCard({
     <div className="services-cards-card">
       <div
         className="services-cards-card-img"
-        style={{
-          width: "100%",
-          height: "300px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          overflow: "hidden",
-          backgroundColor: "#fff", // Optional: Helps with image clarity
-        }}
+        
       >
         <img
           src={imgUrl}
@@ -133,7 +125,7 @@ function ServiceCard({
         />
       </div>
 
-      <div className="services-cards-card-content">
+      <div className="services-cards-card-content" style={{padding: "1rem 2.4rem"}}>
         {/* <h3 className="services-cards-card-content-heading">{heading}</h3> */}
         <p
           className="services-cards-card-content-des"
@@ -150,7 +142,7 @@ function ServiceCard({
           {actualPrice}
         </p>
 
-        <button className="hero-cta" onClick={() => setIsOpen(true)}>
+        <button className="hero-cta" onClick={() => setIsOpen(true)} style={{marginBottom: "0.4rem"}}>
           Avail this Offer Now
         </button>
       </div>
