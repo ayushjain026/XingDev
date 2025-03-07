@@ -6,7 +6,7 @@ import three from "../assets/serviceImages/Offer3/3.jpeg";
 import four from "../assets/serviceImages/Offer3/4.jpeg";
 import five from "../assets/serviceImages/Offer3/5.jpeg";
 
-const images = [one, two, three, four];
+const images = [one, two, four];
 
 const cardData = [
   {
@@ -25,14 +25,7 @@ const cardData = [
     cutoutPrice: "₹ 599",
     currentPrice: "₹ 399",
   },
-  {
-    heading: "",
-    question:
-      'Make a bold statement with large tattoos at just ₹299 per inch!',
-    description: "",
-    cutoutPrice: "₹ 500",
-    currentPrice: "₹ 399",
-  },
+ 
   {
     heading: "",
     question:
@@ -136,7 +129,7 @@ function ServiceCard({
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover", // Ensures the full image is visible
+            objectFit: "contain", // Ensures the full image is visible
           }}
         />
       </div>
