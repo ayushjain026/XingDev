@@ -114,7 +114,7 @@ function ServiceCard({
         className="services-cards-card-img"
         style={{
           width: "100%",
-          height: "270px",
+          height: "300px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
