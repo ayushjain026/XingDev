@@ -1,6 +1,6 @@
 import ContactForm from "./ContactForm";
 
-function ContactSection({locationInfo, offers}) {
+function ContactSection({locationInfo, offers, pageName=""}) {
   return (
     <section id="contact section" className="contact section">
       <div className="contact-map">
@@ -11,6 +11,16 @@ function ContactSection({locationInfo, offers}) {
           <p className="contact-location-address" dangerouslySetInnerHTML={{ __html: locationInfo?.location }}>
             
           </p>
+        </div>
+        <div className="contact-location">
+          <div
+            className="phone-icon"
+            style={{ fontSize: "30px", paddingTop: "10px" }}
+          >
+            <i className="fas fa-phone-alt"></i> {/* Phone number icon */}
+          </div>
+
+          <p className="contact-location-address">+91 {locationInfo?.phoneNumber}</p>
         </div>
         <div className="contact-location-map">
           <iframe
@@ -23,18 +33,8 @@ function ContactSection({locationInfo, offers}) {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <div className="contact-location">
-          <div
-            className="phone-icon"
-            style={{ fontSize: "30px", paddingTop: "10px" }}
-          >
-            <i className="fas fa-phone-alt"></i> {/* Phone number icon */}
-          </div>
-
-          <p className="contact-location-address">+91 {locationInfo?.phoneNumber}</p>
-        </div>
       </div>
-      <ContactForm offers={offers} />
+      <ContactForm offers={offers} pageName={pageName}/>
     </section>
   );
 }

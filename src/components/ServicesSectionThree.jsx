@@ -30,8 +30,8 @@ const cardData = [
     question:
       'Make a bold statement with large tattoos at just ₹299 per inch!',
     description: "",
-    cutoutPrice: "₹ 599",
-    currentPrice: "₹ 299",
+    cutoutPrice: "₹ 500",
+    currentPrice: "₹ 399",
   },
   {
     heading: "",
@@ -41,6 +41,14 @@ const cardData = [
     cutoutPrice: "₹ 3000",
     currentPrice: "₹ 2599",
   },
+  // {
+  //   heading: "",
+  //   question:
+  //     'Bold, intricate, and timeless – get the perfect tattoo for you!',
+  //   description: "",
+  //   cutoutPrice: "₹ 3000",
+  //   currentPrice: "₹ 2599",
+  // },
 ];
 
 function ServicesSectionThree({ setIsOpen }) {
