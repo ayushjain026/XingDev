@@ -168,9 +168,37 @@ function ContactForm({ offers, pageName="" }) {
           )}
         </div>
 
-        <button type="submit" className="contact-cta">
+
+        {offers?.[0] == 'Tattoos' ? (
+          <button
+            href="#"
+            className="hero-cta"
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   scrollToSection("personalized-treatment");
+            // }}
+            style={{
+              backgroundColor: "#f3f3f7",
+              color: "#08080c",
+              border: "2px solid black", // Black border added
+              padding: "10px 20px", // Adjust padding for better appearance
+              borderRadius: "10px", // Optional: rounded corners
+              textDecoration: "none", // Ensures it looks like a button
+              display: "inline-block", // Keeps button shape
+            }}
+          >
+            Avail this Offer Now
+          </button>
+        ) : (
+          <button type="submit" className="contact-cta">
+            Avail this Offer Now
+          </button>
+        )}
+
+
+        {/* <button type="submit" className="contact-cta">
           Avail this Offer Now
-        </button>
+        </button> */}
       </form>
     </div>
   );

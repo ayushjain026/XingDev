@@ -1,7 +1,8 @@
 import logo from '../assets/logo.png';
+import { useParams } from "react-router-dom";
 
-function Navbar() {
-  const { id } = useParams();
+function Navbar({id=0}) {
+  // const { id } = useParams();
   
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -26,9 +27,23 @@ function Navbar() {
           </a>
         </div>
         <div>
-        <a href="#" className="nav-cta" onClick={() => scrollToSection('personalized-treatment')}>
-          Avail this Offer Now
-        </a>
+          {id == 3 ? (
+            <a href="#" className="nav-cta" style={{
+              backgroundColor: "#f3f3f7",
+              color: "#08080c",
+              border: "2px solid black", // Black border added
+              padding: "10px 20px", // Adjust padding for better appearance
+              borderRadius: "10px", // Optional: rounded corners
+              textDecoration: "none", // Ensures it looks like a button
+              display: "inline-block", // Keeps button shape
+            }} onClick={() => scrollToSection('personalized-treatment')}>
+              Avail this Offer Now
+            </a>
+          ) : (
+            <a href="#" className="nav-cta"  onClick={() => scrollToSection('personalized-treatment')}>
+              Avail this Offer Now
+            </a>
+          )}
         </div>
       </nav>
     </>
