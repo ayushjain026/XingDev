@@ -1,6 +1,8 @@
 import logo from '../assets/logo.png';
 
 function Navbar() {
+  const { id } = useParams();
+  
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
