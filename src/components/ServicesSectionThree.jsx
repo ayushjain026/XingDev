@@ -66,7 +66,7 @@ function ServicesSectionThree({ setIsOpen }) {
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="gradient-heading"> From Vision to Reality - Tattoos Crafted with Passion </span>
+        <span className="gradient-heading" style={{color: "#08080c", fontWeight: "900", letterSpacing: "-1px",}}> From Vision to Reality - Tattoos Crafted with Passion </span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>
@@ -109,7 +109,7 @@ function ServiceCard({
   setIsOpen,
 }) {
   return (
-    <div className="services-cards-card">
+    <div className="services-cards-card" style={{backgroundColor: "#08080c", borderRadius: "0"}}>
       <div
         className="services-cards-card-img"
         
@@ -130,6 +130,7 @@ function ServiceCard({
         <p
           className="services-cards-card-content-des"
           dangerouslySetInnerHTML={{ __html: question }}
+          style={{color: "#f3f3f7"}}
         />
         <p
           className="services-cards-card-content-cutoutprice"
@@ -138,11 +139,11 @@ function ServiceCard({
         </p>
         <p
           className="services-cards-card-content-currentprice"
-        >
+        style={{color: "#f3f3f7"}}>
           {actualPrice}
         </p>
 
-        <button className="hero-cta" onClick={() => setIsOpen(true)} style={{marginBottom: "0.4rem"}}>
+        <button className="hero-cta" onClick={() => setIsOpen(true)} style={{marginBottom: "1rem", color: "#08080c", backgroundColor: "#f3f3f7", borderRadius: "0"}}>
           Avail this Offer Now
         </button>
       </div>

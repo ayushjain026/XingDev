@@ -29,12 +29,14 @@ function HeroSectionThree({ locationInfo }) {
               href="#"
               className="hero-cta"
               onClick={() => scrollToSection("personalized-treatment")}
+              style={{backgroundColor: "#f3f3f7", color: "#08080c"}}
             >
               Avail this Offer Now
             </a>
             <a
               className="hero-cta-sec"
               onClick={() => scrollToServiceSection("services-section")}
+              style={{color: "#f3f3f7"}}
             >
               Explore Services
             </a>
