@@ -1,5 +1,5 @@
 import Carousel from "./Carousel";
-import checkIcon from "../assets/hero-check.svg";
+import checkIcon from "../assets/hero-check3.svg";
 
 function HeroSectionThree({ locationInfo }) {
   const scrollToSection = (id) => {
@@ -19,7 +19,7 @@ function HeroSectionThree({ locationInfo }) {
   return (
     <>
       <Carousel></Carousel>
-      <div className="hero-content-container">
+      <div className="hero-content-container override">
         <div className="hero-content">
           <h1 className="hero-heading">
             {locationInfo?.title} Best Tattoo Destination
@@ -36,35 +36,35 @@ function HeroSectionThree({ locationInfo }) {
             <a
               className="hero-cta-sec"
               onClick={() => scrollToServiceSection("services-section")}
-              style={{color: "#f3f3f7"}}
+              style={{color: "#f3f3f7", border: "none"}}
             >
               Explore Services
             </a>
           </div>
           <div className="hero-checks">
             <div className="hero-checks-check">
-              <img src={checkIcon} alt="" className="hero-checks-check-icon" />
+              <img src={checkIcon} alt="" className="hero-checks-check-icon override-icon"/>
               <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Choose Your Price
               </p>
             </div>
             <div className="hero-checks-check">
-              <img src={checkIcon} alt="" className="hero-checks-check-icon" />
+              <img src={checkIcon} alt="" className="hero-checks-check-icon override-icon" />
               <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Choose Your Product
               </p>
             </div>
             <div className="hero-checks-check">
-              <img src={checkIcon} alt="" className="hero-checks-check-icon" />
+              <img src={checkIcon} alt="" className="hero-checks-check-icon override-icon" />
               <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Expert Tattoo artist with 12+ years of experience.
               </p>
             </div>
             <div className="hero-checks-check">
-              <img src={checkIcon} alt="" className="hero-checks-check-icon" />
+              <img src={checkIcon} alt="" className="hero-checks-check-icon override-icon" />
               <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Premium Service starting from
-                <span className="pri-text"> Rs. 299 Only</span>
+                <span className="pri-text" style={{color: "white"}}> Rs. 299 Only</span>
               </p>
             </div>
           </div>

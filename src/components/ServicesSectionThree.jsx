@@ -109,7 +109,7 @@ function ServiceCard({
   setIsOpen,
 }) {
   return (
-    <div className="services-cards-card" style={{backgroundColor: "#08080c", borderRadius: "0"}}>
+    <div className="services-cards-card" style={{backgroundColor: "#f3f3f7", borderRadius: "0"}}>
       <div
         className="services-cards-card-img"
         
@@ -120,7 +120,8 @@ function ServiceCard({
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "contain", // Ensures the full image is visible
+            objectFit: "contain",
+            aspectRatio: "1/1" // Ensures the full image is visible
           }}
         />
       </div>
@@ -130,7 +131,7 @@ function ServiceCard({
         <p
           className="services-cards-card-content-des"
           dangerouslySetInnerHTML={{ __html: question }}
-          style={{color: "#f3f3f7"}}
+         
         />
         <p
           className="services-cards-card-content-cutoutprice"
@@ -139,11 +140,11 @@ function ServiceCard({
         </p>
         <p
           className="services-cards-card-content-currentprice"
-        style={{color: "#f3f3f7"}}>
+        style={{color: "#08080c"}}>
           {actualPrice}
         </p>
 
-        <button className="hero-cta" onClick={() => setIsOpen(true)} style={{marginBottom: "1rem", color: "#08080c", backgroundColor: "#f3f3f7", borderRadius: "0"}}>
+        <button className="hero-cta" onClick={() => setIsOpen(true)} style={{marginBottom: "1rem", color: "#f3f3f7", backgroundColor: "#08080c", borderRadius: "0"}}>
           Avail this Offer Now
         </button>
       </div>
