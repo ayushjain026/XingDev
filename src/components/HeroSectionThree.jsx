@@ -64,7 +64,7 @@ function HeroSectionThree({ locationInfo }) {
               <img src={checkIcon} alt="" className="hero-checks-check-icon override-icon" />
               <p className="hero-checks-check-text" style={{ color: "white" }}>
                 Premium Service starting from
-                <span className="pri-text" style={{color: "white"}}> Rs. 299 Only</span>
+                <span className="pri-text" style={{color: "white", fontSize: "1.9rem",}}><b> Rs. 299 Only</b></span>
               </p>
             </div>
           </div>
