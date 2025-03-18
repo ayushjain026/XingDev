@@ -48,7 +48,7 @@ function LandingPageThree() {
 
   return (
     <>
-      <Navbar openModal={openModal} />
+      <Navbar openModal={openModal} id="3" />
       <HeroSectionThree locationInfo={dynamicProps} />
       <ServicesSectionThree setIsOpen={setIsOpen} />
       <CarouselSection3 />

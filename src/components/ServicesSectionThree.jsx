@@ -109,7 +109,7 @@ function ServiceCard({
   setIsOpen,
 }) {
   return (
-    <div className="services-cards-card" style={{backgroundColor: "#f3f3f7", borderRadius: "0"}}>
+    <div className="services-cards-card" style={{backgroundColor: "#f0f0f0", borderRadius: "0"}}>
       <div
         className="services-cards-card-img"
         
