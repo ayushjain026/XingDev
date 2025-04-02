@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Xing Tattoo Studio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font[Montserrat]">
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="h-10 w-auto" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-18">
+      <section class="relative w-full h-[99vh] overflow-hidden">
+        <!-- Dark Overlay with Text Content -->
+        <div
+          class="bg-black opacity-70 w-full h-full flex flex-col items-center justify-center absolute top-0 left-0 z-10 text-center text-white px-6 md:px-12"
+        >
+          <div>
+            <h1 class="text-[1.7rem] tracking-[2px] font-bold uppercase p-1">
+              Whitefield's Best Tattoo Destination
+            </h1>
+            <h4 class="mt-4 text-[0.9rem] text-gray-200 p-2">
+              Expert tattoo artists with 12+ years of experience. Starting from
+              just RS. 299 only
+            </h4>
+          </div>
+
+          <!-- Button Inside Overlay, Below Text -->
+          <a
+            href="#services"
+            class="mt-24 px-6 py-3 text-m font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-black transition duration-300"
+          >
+            Explore Services
+          </a>
+        </div>
+
+        <!-- Image Carousel -->
+        <div class="carousel relative w-full h-full">
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <img
+            src="./p3_1.jpg"
+            class="absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          />
+          <img
+            src="./p3_2.jpg"
+            class="absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          />
+          <img
+            src="./p3_3.jpg"
+            class="absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          />
+        </div>
+
+        <!-- Bottom Text Styled Like Image -->
+        <div class="absolute bottom-10 w-full text-center z-20">
+          <p class="text-white text-lg md:text-xl font-light tracking-widest">
+            1000+ TATTOOS DELIVERED
+          </p>
+        </div>
+      </section>
+
+      <!-- Service Section -->
+      <section
+        class="w-screen h-screen bg-white flex flex-col justify-center items-center px-6"
+      >
+        <!-- Text Section -->
+        <div class="text-center mb-20 mt-20 relative">
+          <p class="tracking-widest text-gray-700 text-sm uppercase">
+            Every stroke reflects a story
+          </p>
+          <h1 class="text-3xl md:text-5xl font-bold mt-2">
+            Get Your Tattoo Vision to Reality
+          </h1>
+          <img
+            src="./image.png"
+            alt=""
+            class="absolute top-[-6rem] right-[-2rem]"
+          />
+        </div>
+
+        <!-- Scrollable Image Section -->
+        <div
+          class="w-full h-[80vh] relative overflow-x-auto lg:overflow-hidden flex items-center"
+        >
+          <div class="min-w-full h-full flex-shrink-0">
+            <img
+              src="./ServiceSection.png"
+              alt="Scrollable Image"
+              class="h-full w-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Offer Section -->
+      <section
+        id="services"
+        class="w-screen min-h-screen bg-white flex flex-col justify-center items-center pt-10 px-6"
+      >
+        <div class="text-center mb-20 mt-16">
+          <p class="tracking-widest text-gray-700 text-sm uppercase">
+            Every stroke reflects a story
+          </p>
+          <h1 class="text-3xl md:text-5xl font-bold mt-2">
+            Get Your Tattoo Vision to Reality
+          </h1>
+        </div>
+
+        <!-- Offers Section (Now Just a Flexbox Row) -->
+        <div class="w-full flex flex-wrap justify-center gap-8">
+          <!-- Offer - 1 -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden w-96 h-auto"
+          >
+            <img
+              src="./p3_o1.jpeg"
+              alt="Tattoo Image"
+              class="w-full h-72 object-contain"
+            />
+            <div class="p-4">
+              <p class="text-gray-700 text-sm">
+                The bigger the tattoo, the bigger the discount – ink more, save
+                more!
+              </p>
+              <div class="flex items-center mt-2">
+                <span class="text-gray-400 line-through text-lg">Rs. 599</span>
+                <span class="text-2xl font-bold text-black ml-2">Rs. 299</span>
+              </div>
+              <a
+                href="#custom-tattoo-design"
+                class="mt-4 block text-center bg-black text-white py-2 rounded-lg hover:bg-gray-800"
+              >
+                Avail Offer
+              </a>
+            </div>
+          </div>
+
+          <!-- Offer - 2 -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden w-96 h-auto"
+          >
+            <img
+              src="./p3_o2.jpeg"
+              alt="Tattoo Image"
+              class="w-full h-72 object-contain"
+            />
+            <div class="p-4">
+              <p class="text-gray-700 text-sm">
+                Vibrant color tattoos at ₹399 per inch - let your ink shine!
+              </p>
+              <div class="flex items-center mt-2">
+                <span class="text-gray-400 line-through text-lg">Rs. 500</span>
+                <span class="text-2xl font-bold text-black ml-2">Rs. 399</span>
+              </div>
+              <a
+                href="#custom-tattoo-design"
+                class="mt-4 block text-center bg-black text-white py-2 rounded-lg hover:bg-gray-800"
+              >
+                Avail Offer
+              </a>
+            </div>
+          </div>
+
+          <!-- Offer - 3 -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden w-96 h-auto"
+          >
+            <img
+              src="./p3_o3.jpeg"
+              alt="Tattoo Image"
+              class="w-full h-72 object-contain"
+            />
+            <div class="p-4">
+              <p class="text-gray-700 text-sm">
+                Express yourself with any tattoo up to 10 inches for just ₹2500!
+              </p>
+              <div class="flex items-center mt-2">
+                <span class="text-gray-400 line-through text-lg">Rs. 3000</span>
+                <span class="text-2xl font-bold text-black ml-2">Rs. 2500</span>
+              </div>
+              <a
+                href="#custom-tattoo-design"
+                class="mt-4 block text-center bg-black text-white py-2 rounded-lg hover:bg-gray-800"
+              >
+                Avail Offer
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact up -->
+      <section
+        id="custom-tattoo-design"
+        class="w-screen h-screen bg-cover bg-center flex flex-col items-center justify-center text-white px-4 relative"
+        style="background-image: url('./p3_1.png')"
+      >
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10">
+          <!-- Title -->
+          <h1 class="text-4xl md:text-6xl font-bold text-center">
+            Get custom tattoo design
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="mt-2 text-s text-center font[Montserrat] text-gray-400">
+            Our expert stylists are dedicated to restoring your hair’s vitality,
+            ensuring you leave our salon feeling radiant and confident.
+          </p>
+
+          <!-- Form -->
+          <div class="mt-6 p-2 w-full max-w-lg">
+            <form id="tattooForm" class="space-y-6">
+              <!-- Name -->
+              <div>
+                <label class="block text-s font-medium text-white"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-2 backdrop-blur-md rounded-lg mt-[0.4rem] bg-transparent text-white placeholder-white border border-gray-300 focus:ring-2 focus:ring-white outline-none"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <!-- Phone Number -->
+              <div>
+                <label class="block text-s font-medium text-white"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-2 backdrop-blur-md mt-[0.4rem] rounded-lg bg-transparent text-white placeholder-white border border-white focus:ring-2 focus:ring-white outline-none"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+
+              <!-- Service Dropdown -->
+              <div>
+                <label class="block text-s font-medium text-white"
+                  >Select Your Service</label
+                >
+                <select
+                  id="service"
+                  class="w-full p-2 mt-[0.4rem] backdrop-blur-md rounded-lg bg-transparent text-white border border-white focus:ring-2 focus:ring-white outline-none"
+                  required
+                >
+                  <option value="" class="text-black">Tattos</option>
+                </select>
+              </div>
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full bg-white text-black mt-[4rem] py-2 px-4 text-m rounded-lg hover:bg-gray-300"
+              >
+                Avail Offer
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Validation -->
+      <script>
+        document
+          .getElementById('tattooForm')
+          .addEventListener('submit', function (event) {
+            const phone = document.getElementById('phone');
+            if (!/^\d{10}$/.test(phone.value)) {
+              alert('Please enter a valid 10-digit phone number.');
+              event.preventDefault();
+            }
+          });
+      </script>
+
+      <section
+        id="location"
+        class="flex flex-col items-center justify-center p-6 max-w-screen h-screen bg-white shadow-md"
+      >
+        <!-- Contact Info -->
+        <div class="mb-5 text-center">
+          <div class="text-xl font-bold text-gray-800 mb-3">
+            📞 +91 79966 66012
+          </div>
+          <div class="text-gray-600 text-base leading-relaxed">
+            📍 1st Floor, Number 267, SV Plaza,<br />
+            60 Feet Rd, AECS Layout - A Block,<br />
+            AECS Layout, Marathahalli, Bengaluru,<br />
+            Karnataka 560037
+          </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="w-full h-3/5 rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.621675304381!2d77.70912729999999!3d12.963452499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1309406c2c01%3A0x2eb6dc1b4d71e4b3!2sXing%20Premium%20Salon!5e1!3m2!1sen!2sin!4v1737650418906!5m2!1sen!2sin"
+            class="w-full h-full border-none"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location Map"
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <footer class="bg-gray-100 text-gray-800 py-8">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col items-center">
+            <!-- Salon Name -->
+            <img src="./logo.jpeg" />
+            <!-- Address -->
+            <div class="text-left mb-4">
+              <label>
+                1st floor, Number 267, SV Plaza,<br />
+                60 Feet Rd, AECS Layout - A Block,<br />
+                AECS Layout, Marathahalli, Bengaluru, Karnataka 560037
+              </label>
+            </div>
+            <!-- Links Section -->
+            <div class="flex justify-around w-full mb-4">
+              <div class="text-center">
+                <h2 class="font-bold mb-2">Quick Links</h2>
+                <ul>
+                  <li>
+                    <a href="#services" class="text-gray-500 hover:underline"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#location" class="text-gray-500 hover:underline"
+                      >Contact</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#location" class="text-gray-500 hover:underline"
+                      >Location</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center">
+                <h2 class="font-bold mb-2">Socials</h2>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/xingpremiumsalons"
+                      class="text-gray-500 hover:underline"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/people/XING-Salon-Nails-and-Tattoo/100089547421311/"
+                      class="text-gray-500 hover:underline"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=%2B917996666012&text=I+want+to+avail+hair+offer"
+                      class="text-gray-500 hover:underline"
+                      >WhatsApp</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Contact Information -->
+            <div class="text-center mb-4">
+              <h2 class="font-bold mb-2">Contact</h2>
+              <p>
+                <a
+                  href="mailto:xing.sarjapura@gmail.com"
+                  class="text-gray-500 hover:underline"
+                  >xing.Aecs@gmail.com</a
+                >
+              </p>
+              <p>
+                <a
+                  href="tel:+917996660612"
+                  class="text-gray-500 hover:underline"
+                  >+91 79966-66012</a
+                >
+              </p>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center text-gray-600">
+              <p>© 2025 XING Salons. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const images = document.querySelectorAll('.carousel img');
+      let index = 0;
+      function showNextImage() {
+        images.forEach((img) => img.classList.add('opacity-0'));
+        images[index].classList.remove('opacity-0');
+        index = (index + 1) % images.length;
+      }
+      setInterval(showNextImage, 3000);
+      showNextImage();
+    </script>
+  </body>
+</html>
