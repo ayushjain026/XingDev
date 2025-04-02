@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import imagezero from '../assets/ShopImages1/0.jpg';
 import imageOne from '../assets/ShopImages1/1.jpg';
 import imageTwo from '../assets/ShopImages1/2.jpg';
 import imageThree from '../assets/ShopImages1/3.jpg';
@@ -12,6 +13,7 @@ import imageNine from '../assets/ShopImages1/9.jpg';
 function CarouselSection1() {
   // Array of images and current index
   const images = [
+    imagezero,
     imageOne,
     imageTwo,
     imageThree,
