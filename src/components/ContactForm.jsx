@@ -62,7 +62,7 @@ function ContactForm({ offers, pageName="" }) {
     fetch(gSheetUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${userName}&Phone=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}`,
+      body: `Name=${userName}&Email=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}`,
     })
       .then((res) => res.text())
       .then(() => {
