@@ -10,7 +10,7 @@ function App() {
       title: "Sarjapura’s",
       email: "xing.sarjapura@gmail.com",
       location: "Xing Premium Unisex Salon, <br />Opposite Clult PlayOn Fitness, <br /> 71/1A, Samvit Greens, <br /> Sarjapur - Marathahalli Rd, <br /> opposite St. Peter's School, Kaikondrahalli, Bengaluru, Karnataka 560035",
-      phoneNumber: "79966-66012",
+      phoneNumber: "89700-07440",
       mapLocation: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.2694467890137!2d77.6491593!3d12.9186477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f98d9ff67f%3A0xf60aff455de2d151!2sXing%20Premium%20Unisex%20Salon%2C%20HSR%20Layout!5e1!3m2!1sen!2sin!4v1737181873458!5m2!1sen!2sin",
       whatsAppRedirectionUrl: "https://api.whatsapp.com/send/?phone=8970007440&text=I+want+to+avail+hair+offer&type=phone_number&app_absent=0"
     },
