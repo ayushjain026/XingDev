@@ -130,12 +130,13 @@ function ServiceCard({
         className="services-cards-card-img"
         style={{
           width: "500px",
-          height: "480px", // Slightly increased height
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          overflow: "hidden",
-          margin: "0", // Ensure no extra padding or margin
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
+            margin: "0", // Ensure no extra padding or margin
+            width: "100%", // Make the container responsive
+            height: "auto", // Allow height to adjust automatically
           padding: "0", // Ensure no extra padding
           backgroundColor: "#fff", // Optional: Helps with image clarity
         }}
@@ -146,7 +147,7 @@ function ServiceCard({
           style={{
             width: "100%", // Ensure full width
             height: "100%", // Ensure full height
-            objectFit: "cover", // Prevent cropping and fill the container
+            objectFit: "contain", // Ensure the image fits exactly within the container
           }}
         />
       </div>
