@@ -1,18 +1,20 @@
 import stars from "../assets/star.svg";
-import r1 from "../assets/reviews/PageThree/1.png";
-import r2 from "../assets/reviews/PageThree/2.png";
-import r3 from "../assets/reviews/PageThree/3.png";
-import r4 from "../assets/reviews/PageThree/4.png";
-import r5 from "../assets/reviews/PageThree/5.png";
-import r6 from "../assets/reviews/PageThree/6.png";
-import r7 from "../assets/reviews/PageThree/7.png";
-import r8 from "../assets/reviews/PageThree/8.png";
-import r9 from "../assets/reviews/PageThree/9.png";
-import r10 from "../assets/reviews/PageThree/10.png";
+import r1 from "../assets/reviews/PageOne/r1.jpeg";
+import r2 from "../assets/reviews/PageOne/r2.jpeg";
+import r3 from "../assets/reviews/PageOne/r3.jpeg";
+import r4 from "../assets/reviews/PageOne/r4.jpeg";
+import r5 from "../assets/reviews/PageOne/r5.jpeg";
+import r6 from "../assets/reviews/PageOne/r6.jpeg";
+import r7 from "../assets/reviews/PageOne/r7.jpeg";
+import r21 from "../assets/reviews/PageTwo/r21.jpeg";
+import r22 from "../assets/reviews/PageTwo/r22.jpeg";
+import r23 from "../assets/reviews/PageTwo/r23.jpeg";
+import r24 from "../assets/reviews/PageTwo/r24.jpeg";
+import r25 from "../assets/reviews/PageTwo/r25.jpeg";
 
-const images = [r1, r2, r8, r9, r10, r5, r6, r7, r4, r3]; 
+const images = [r1, r21, r2, r22, r3, r23, r4, r24, r5, r25, r6, r7]; 
   
-const ReviewsSectionTwo = () => {
+const ReviewsSectionThree = () => {
   return (
     <section id="review-section" className="reviews">
       <div className="reviews-stats">
@@ -58,7 +60,7 @@ const ReviewImageCard = (image) => {
     className="reviews-cards-card"
     style={{
       width: "350px",
-      height: "270px",
+      height: "300px",
       overflow: "hidden",
       borderRadius: "8px",
       border: "1px solid #ddd",
@@ -88,4 +90,4 @@ const ReviewImageCard = (image) => {
   );
 }
 
-export default ReviewsSectionTwo;
+export default ReviewsSectionThree;

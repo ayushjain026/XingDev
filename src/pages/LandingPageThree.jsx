@@ -12,6 +12,10 @@ import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
 import CarouselSection2 from "../components/CarouselSection2";
 import ServicesSectionThree from "../components/ServicesSectionThree";
+import HeroSectionThree from "../components/HeroSectionThree";
+import CarouselSection3 from "../components/CarouselSection3";
+import ReviewsSectionThree from "../components/ReviewsSectionThree";
+import QnaSectionThree from "../components/QnaSectionThree";
 
 function LandingPageThree({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
@@ -41,13 +45,13 @@ function LandingPageThree({locationPropsMap}) {
   return (
     <>
       <Navbar openModal={openModal} />
-      <HeroSectionTwo locationInfo={dynamicProps} />
+      <HeroSectionThree locationInfo={dynamicProps} />
       <ServicesSectionThree setIsOpen={setIsOpen} />
-      <CarouselSection2 />
-      <ReviewsSectionTwo />
-      <QnaSectionTwo />
+      <CarouselSection3 />
+      <ReviewsSectionThree />
+      <QnaSectionThree />
       
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Customize Your Perfect Hair Color" />}
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Elevate Your Look with Premium Shades" />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}

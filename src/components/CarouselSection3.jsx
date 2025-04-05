@@ -1,23 +1,45 @@
 import { useState, useRef, useEffect } from 'react';
-import imageOne from '../assets/ShopImages3/1.jpeg';
-import imageTwo from '../assets/ShopImages3/2.jpeg';
-import imageThree from '../assets/ShopImages3/3.jpeg';
-import imageFour from '../assets/ShopImages3/4.jpeg';
-import imageFive from '../assets/ShopImages3/5.jpeg';
-import imageSix from '../assets/ShopImages3/6.jpeg';
-import imageSeven from '../assets/ShopImages3/7.jpeg';
-import imageEight from '../assets/ShopImages3/7.jpeg';
+import imageOne from '../assets/ShopImages2/1.jpeg';
+import imageTwo from '../assets/ShopImages2/2.jpeg';
+import imageThree from '../assets/ShopImages2/3.jpeg';
+import imageFour from '../assets/ShopImages2/4.jpeg';
+import imageFive from '../assets/ShopImages2/5.jpeg';
+import imageSix from '../assets/ShopImages2/6.jpeg';
+import imageSeven from '../assets/ShopImages2/7.jpeg';
+import imageEight from '../assets/ShopImages2/8.jpeg';
+import imageNine from '../assets/ShopImages2/9.jpeg';
+import imagezero2 from '../assets/ShopImages1/0.jpg';
+import imageOne2 from '../assets/ShopImages1/1.jpg';
+import imageTwo2 from '../assets/ShopImages1/2.jpg';
+import imageThree2 from '../assets/ShopImages1/3.jpg';
+import imageFour2 from '../assets/ShopImages1/4.jpg';
+import imageFive2 from '../assets/ShopImages1/5.jpg';
+import imageSix2 from '../assets/ShopImages1/6.jpg';
+import imageSeven2 from '../assets/ShopImages1/7.jpg';
+import imageEight2 from '../assets/ShopImages1/8.jpg';
+import imageNine2 from '../assets/ShopImages1/9.jpg';
 
 function CarouselSection3() {
   const images = [
-    imageOne,
+    imageOne2,
     imageTwo,
+    imageTwo2,
     imageThree,
-    imageFour,
     imageFive,
-    imageSix,
-    imageSeven,
-    imageEight,
+    imageFive2,
+    imageSix, 
+    imageSix2,
+    imageSeven, 
+    imageSeven2,
+    imageEight, 
+    imageSeven2,
+    imageFour,
+    imageEight2,
+    imageFour2,
+    imageNine,
+    imageNine2,
+    imageOne,
+    imageThree2
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,7 +103,7 @@ function CarouselSection3() {
         .unique-carousel {
           position: relative;
           width: 100%;
-          height: 90vh;
+          height: 100vh;
           overflow: hidden;
         }
 

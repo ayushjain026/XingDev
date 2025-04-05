@@ -6,7 +6,7 @@ import r4 from "../assets/reviews/PageOne/r4.jpeg";
 import r5 from "../assets/reviews/PageOne/r5.jpeg";
 import r6 from "../assets/reviews/PageOne/r6.jpeg";
 import r7 from "../assets/reviews/PageOne/r7.jpeg";
-const images = [r1, r2, r3, r4, r5, r6, r7]; // Store images in an array
+const images = [r1, r2, r3, r4, r5, r6, r7]; 
 
 const ReviewsSectionOne = () => {
   return (

@@ -9,56 +9,67 @@ function QnaSectionThree() {
 
   const accordionData = [
     {
-      question: 'Do tattoos hurt?',
+      question: 'How does a Keratin or Hair Botox treatment work?',
       answer:
-        'Tattoo pain varies depending on placement, size, and your pain tolerance. Areas with more bone or nerve endings, like ribs and wrists, tend to be more painful, while fleshier areas like thighs and upper arms are usually less painful.',
+        'Both Keratin and Hair Botox treatments aim to smooth and repair hair. Keratin uses protein to eliminate frizz and add shine, while Hair Botox deeply conditions and restores damaged strands without chemicals like formaldehyde.',
     },
     {
-      question: 'How long does a tattoo take to heal?',
+      question: 'Is Hair Botox better than Keratin?',
       answer:
-        'Most tattoos take about 2-3 weeks to heal on the surface, but full healing can take up to a month or more. Proper aftercare, like moisturizing and avoiding sun exposure, is crucial for the best results.',
+        'Hair Botox is a gentler, chemical-free alternative to Keratin. It’s ideal for dry or damaged hair and focuses on deep hydration and repair, while Keratin also smooths and straightens. The right choice depends on your hair type and goals.',
     },
     {
-      question: 'Do color tattoos fade faster than black and grey tattoos?',
+      question: 'What is Nanoplastia and how does it help hair?',
       answer:
-        'Yes, color tattoos tend to fade faster than black and grey tattoos, especially lighter shades like yellow and pink. Proper aftercare, sun protection, and touch-ups can help maintain vibrancy.',
+        'Nanoplastia is a revolutionary hair treatment that uses nanotechnology and amino acids to deeply nourish, smooth, and straighten hair without harsh chemicals. It improves hair health while giving a sleek, shiny finish.',
     },
     {
-      question: 'Can I get a color tattoo on dark skin?',
+      question: 'Is Nanoplastia safe for all hair types?',
       answer:
-        'Absolutely! While certain colors may appear differently on darker skin tones, skilled tattoo artists can use bolder pigments and shading techniques to ensure a vibrant, long-lasting result.',
+        'Yes, Nanoplastia is safe for most hair types including chemically treated or colored hair. It’s formaldehyde-free and provides both straightening and deep hydration, making it a preferred option for healthy hair transformations.',
     },
     {
-      question: 'What is the best way to care for a new tattoo?',
+      question: 'What does a Hair Spa treatment do?',
       answer:
-        'Keep your tattoo clean, moisturized, and avoid direct sunlight. Avoid swimming and excessive sweating for at least two weeks to prevent infections and fading. Follow your artist’s specific aftercare instructions for the best healing process.',
+        'A Hair Spa is a deep conditioning treatment that hydrates, nourishes, and strengthens the hair. It improves scalp health, reduces dryness, and gives your hair a natural shine and bounce.',
     },
     {
-      question: 'Do tattoos fade over time?',
+      question: 'How often should I get a Hair Spa?',
       answer:
-        'Yes, all tattoos fade over time due to skin regeneration, sun exposure, and lifestyle factors. Regular moisturizing and sunscreen application can slow down the fading process.',
+        'It’s recommended to get a Hair Spa treatment once every 2 to 4 weeks, depending on your hair condition and exposure to heat or chemical treatments. Regular spa treatments help maintain healthy, soft, and frizz-free hair.',
     },
     {
-      question: 'Can I get a tattoo if I have sensitive skin?',
+      question: 'Do highlights damage hair?',
       answer:
-        'Yes, but it’s recommended to consult with a tattoo artist beforehand. Patch tests can help determine if your skin reacts to tattoo ink. Using high-quality ink and proper aftercare reduces irritation risks.',
+        'Highlights involve lightening the hair, which can cause dryness if not cared for. However, when done professionally with quality products and followed by deep conditioning, the damage is minimal and manageable.',
     },
     {
-      question: 'What is the difference between black ink and color ink tattoos?',
+      question: 'Can I get highlights on dark hair?',
       answer:
-        'Black ink tattoos often age better and require fewer touch-ups, while color tattoos offer more vibrancy and artistic expression but may fade faster, especially in sun-exposed areas.',
+        'Absolutely! Highlights can be tailored to any hair color. On dark hair, caramel, honey, or golden tones work beautifully and add dimension. Pre-lightening may be needed for brighter shades.',
     },
     {
-      question: 'Can I cover up an old tattoo with a color tattoo?',
+      question: 'How is Balayage different from regular highlights?',
       answer:
-        'Yes, cover-up tattoos can be done with both black and color ink. Darker, bolder colors work best for covering old tattoos, and your artist can design a new piece to effectively mask the previous tattoo.',
+        'Balayage is a freehand coloring technique that gives a sun-kissed, natural look by blending lighter tones from mid-length to ends. Unlike traditional highlights, it doesn’t use foils and grows out more gracefully.',
     },
     {
-      question: 'How often do color tattoos need touch-ups?',
+      question: 'Is Balayage suitable for all hair lengths?',
       answer:
-        'Color tattoos may need touch-ups every few years, especially for bright or pastel shades. Proper aftercare and avoiding excessive sun exposure can help prolong their vibrancy.',
+        'Yes, Balayage works well on medium to long hair, where the gradient effect is most visible. However, with a skilled stylist, even shorter hair can be beautifully balayaged for a subtle, modern look.',
+    },
+    {
+      question: 'What is Global Hair Color and who is it for?',
+      answer:
+        'Global Hair Color means coloring the entire head with one shade. It’s ideal for those looking to refresh their natural color, cover grays, or experiment with bold new tones evenly.',
+    },
+    {
+      question: 'Can I combine Global Hair Color with treatments like Keratin or Nanoplastia?',
+      answer:
+        'Yes, but the timing matters. It’s best to do the color either two weeks before or after treatments like Keratin or Nanoplastia to prevent interference with results and ensure hair health is maintained.',
     },
   ];
+  
 
   return (
     <section className="qna">
