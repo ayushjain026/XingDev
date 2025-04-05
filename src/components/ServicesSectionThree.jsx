@@ -82,14 +82,11 @@ function ServicesSectionThree({ setIsOpen }) {
   return (
     <section id="services-section" className="services section">
       <h2 className="services-heading">
-        <span className="pri-text">
-          ✨ Smoother. Stronger. Shinier. Frizz-Free. ✨
-        </span>
+        <span className="pri-text">✨ Smoother. Stronger. Shinier. Frizz-Free. ✨</span>
         <br />
         <div style={containerStyle}>
           <h1 style={textStyle}>
-            Say hello to healthier, head-turning hair – because you deserve to
-            shine every day!
+          Say hello to healthier, head-turning hair – because you deserve to shine every day!
           </h1>
         </div>
       </h2>
@@ -132,8 +129,8 @@ function ServiceCard({
       <div
         className="services-cards-card-img"
         style={{
-          width: "100%",
-          height: "450px", // Slightly increased height
+          width: "500px",
+          height: "480px", // Slightly increased height
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
