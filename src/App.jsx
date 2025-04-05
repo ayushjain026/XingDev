@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
         <Route path="/1" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
         <Route path="/2" element={<LandingPageTwo locationPropsMap={locationPropsMap} />} />
-        {/* <Route path="/3" element={<LandingPageThree />} /> */}
+        <Route path="/3" element={<LandingPageThree locationPropsMap={locationPropsMap} />} />
       </Routes>
     </Router>
   );

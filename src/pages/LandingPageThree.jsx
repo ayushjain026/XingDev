@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
-import ReviewsSectionThree from "../components/ReviewsSectionThree";
-import QnaSectionThree from "../components/QnaSectionThree";
+import HeroSectionTwo from "../components/HeroSectionTwo";
+import ServicesSectionTwo from "../components/ServicesSectionTwo";
+import ReviewsSectionTwo from "../components/ReviewsSectionTwo";
+import QnaSectionTwo from "../components/QnaSectionTwo";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import PopupFormModal from "../components/PopupFormModule";
@@ -8,33 +10,23 @@ import ContactForm from "../components/ContactForm";
 import logo from "../assets/logo.png";
 import ContactSection from "../components/ContactSection";
 import { useLocation } from "react-router-dom";
-import CarouselSection3 from "../components/CarouselSection3";
-import HeroSectionThree from "../components/HeroSectionThree";
+import CarouselSection2 from "../components/CarouselSection2";
 import ServicesSectionThree from "../components/ServicesSectionThree";
 
-function LandingPageThree() {
+function LandingPageThree({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const offers = ['Tattoos']
-
-  const locationPropsMap = {
-    "aecs-layout": {
-      title: "Whitefield's",
-      email: "Xing.Aecs@gmail.com",
-      location: "1st floor, Number 267, SV Plaza, <br />60 Feet Rd, AECS Layout - A Block, <br />AECS Layout, Marathahalli, Bengaluru, Karnataka 560037",
-      phoneNumber: "79966-66012",
-      mapLocation: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.621675304381!2d77.70912729999999!3d12.963452499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1309406c2c01%3A0x2eb6dc1b4d71e4b3!2sXing%20Premium%20Salon!5e1!3m2!1sen!2sin!4v1737650418906!5m2!1sen!2sin",
-      whatsAppRedirectionUrl: "https://api.whatsapp.com/send/?phone=7996666012&text=I+want+to+avail+hair+offer&type=phone_number&app_absent=0"
-    }
-  };
+  const offers = ['Keratine / Botox', 'Nanoplastia', 'Hair Spa', '⁠Hair Highlights', 'Balyage', 'Global Hair Color']
 
   // Get query parameters from the URL
   const getLocation = useLocation();
   const queryParams = new URLSearchParams(getLocation.search);
   const location = queryParams.get("location");
 
+  // Define location-specific props
+
   // Get the props for the current location
-  const dynamicProps = locationPropsMap[location] || locationPropsMap["aecs-layout"];
+  const dynamicProps = locationPropsMap[location];
 
   // Function to open modal
   const openModal = () => {
@@ -48,14 +40,14 @@ function LandingPageThree() {
 
   return (
     <>
-      <Navbar openModal={openModal} id="3" />
-      <HeroSectionThree locationInfo={dynamicProps} />
+      <Navbar openModal={openModal} />
+      <HeroSectionTwo locationInfo={dynamicProps} />
       <ServicesSectionThree setIsOpen={setIsOpen} />
-      <CarouselSection3 />
-      <ReviewsSectionThree />
-      <QnaSectionThree />
+      <CarouselSection2 />
+      <ReviewsSectionTwo />
+      <QnaSectionTwo />
       
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName={"Get Custom Tattoo Designs"} />}
+      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Customize Your Perfect Hair Color" />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}
