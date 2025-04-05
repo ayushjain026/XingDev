@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import discountTag from "../assets/discount-tag.svg";
 import NanoPlastia from "../assets/NanoPlastiaService.jpeg";
-import HairKeratin from "../assets/HairKeratin.jpeg";
+import HairKeratin from "../assets/s5_1.jpg";
 import one from "../assets/serviceImages/11.jpeg";
 import two from "../assets/serviceImages/22.jpeg";
 import three from "../assets/serviceImages/33.jpeg";
 import four from "../assets/serviceImages/44.jpeg";
 
-const images = [NanoPlastia, HairKeratin, one, two, three, four];
+const images = [HairKeratin, NanoPlastia, one, two, three, four];
 
 const cardData = [
   {

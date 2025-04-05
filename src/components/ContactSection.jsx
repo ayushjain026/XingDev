@@ -8,8 +8,8 @@ function ContactSection({locationInfo, offers, pageName=""}) {
           <div className="location-icon" style={{ fontSize: "30px" }}>
             <i className="fas fa-map-marker-alt"></i>
           </div>
-          <p className="contact-location-address" dangerouslySetInnerHTML={{ __html: locationInfo?.location }}>
-            
+          <p className="contact-location-address">
+          25/2, Ayyappa Nagar Main Rd, <br />Priyadarshini Layout, <br />Krishnarajapuram, <br />Bengaluru, <br />Karnataka 560037
           </p>
         </div>
         <div className="contact-location">
@@ -24,7 +24,7 @@ function ContactSection({locationInfo, offers, pageName=""}) {
         </div>
         <div className="contact-location-map">
           <iframe
-            src={locationInfo?.mapLocation}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.491350277281!2d77.7092607!3d13.0043521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11a98a8cd523%3A0x1086a50ccbea8223!2sExpress%20Cuts%20Unisex%20Salon%20-%20KR%20Puram!5e0!3m2!1sen!2sin!4v1743881637937!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: "0" }}

@@ -16,6 +16,7 @@ import HeroSectionThree from "../components/HeroSectionThree";
 import CarouselSection3 from "../components/CarouselSection3";
 import ReviewsSectionThree from "../components/ReviewsSectionThree";
 import QnaSectionThree from "../components/QnaSectionThree";
+import Navbar5 from "../components/Navbar5";
 
 function LandingPageThree({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
@@ -44,7 +45,7 @@ function LandingPageThree({locationPropsMap}) {
 
   return (
     <>
-      <Navbar openModal={openModal} />
+      <Navbar5 openModal={openModal} />
       <HeroSectionThree locationInfo={dynamicProps} />
       <ServicesSectionThree setIsOpen={setIsOpen} />
       <CarouselSection3 />
