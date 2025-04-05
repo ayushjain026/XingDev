@@ -17,6 +17,7 @@ import CarouselSection3 from "../components/CarouselSection3";
 import ReviewsSectionThree from "../components/ReviewsSectionThree";
 import QnaSectionThree from "../components/QnaSectionThree";
 import Navbar5 from "../components/Navbar5";
+import ContactSection5 from "../components/ContactSection5";
 
 function LandingPageThree({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
@@ -52,7 +53,7 @@ function LandingPageThree({locationPropsMap}) {
       <ReviewsSectionThree />
       <QnaSectionThree />
       
-      {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Elevate Your Look with Premium Shades" />}
+      {dynamicProps && <ContactSection5 locationInfo={dynamicProps} offers={offers} pageName="Elevate Your Look with Premium Shades" />}
       {dynamicProps && <Footer locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}
