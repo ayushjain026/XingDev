@@ -19,7 +19,7 @@ import QnaSectionThree from "../components/QnaSectionThree";
 import Navbar5 from "../components/Navbar5";
 import ContactSection5 from "../components/ContactSection5";
 
-function LandingPageThree({locationPropsMap}) {
+function LandingPageFive({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const offers = ['Keratine / Botox', 'Nanoplastia', 'Hair Spa', '⁠Hair Highlights', 'Balyage', 'Global Hair Color']
@@ -33,6 +33,7 @@ function LandingPageThree({locationPropsMap}) {
 
   // Get the props for the current location
   const dynamicProps = locationPropsMap[location];
+  const locationname = locationPropsMap[location];
 
   // Function to open modal
   const openModal = () => {
@@ -59,7 +60,7 @@ function LandingPageThree({locationPropsMap}) {
       {/* Popup form logic */}
       {isOpen && (
         <div className="popup-container">
-          <ContactForm offers={offers} />
+          <ContactForm offers={offers} title={locationInfo.title} />
           <p
             className="popup-close"
             onClick={() => {
@@ -76,4 +77,4 @@ function LandingPageThree({locationPropsMap}) {
   );
 }
 
-export default LandingPageThree;
+export default LandingPageFive;

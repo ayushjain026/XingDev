@@ -34,7 +34,7 @@ function ContactSection({locationInfo, offers, pageName=""}) {
           />
         </div>
       </div>
-      <ContactForm offers={offers} pageName={pageName}/>
+      <ContactForm offers={offers} pageName={pageName} title={locationInfo.title} />
     </section>
   );
 }

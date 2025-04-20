@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./sass/main.sass";
 import LandingPageOne from "./pages/LandingPageOne.jsx";
 import LandingPageTwo from "./pages/LandingPageTwo.jsx";
-import LandingPageThree from "./pages/LandingPageThree.jsx";
+import LandingPageFive from "./pages/LandingPageFive.jsx";
 
 function App() {
   const locationPropsMap = {
@@ -35,11 +35,11 @@ function App() {
   return (
     <Router basename="/">
       <Routes>
-        <Route path="/" element={<LandingPageThree locationPropsMap={locationPropsMap} />} />
+        <Route path="/" element={<LandingPageFive locationPropsMap={locationPropsMap} />} />
         <Route path="/1" element={<LandingPageOne locationPropsMap={locationPropsMap} />} />
         <Route path="/2" element={<LandingPageTwo locationPropsMap={locationPropsMap} />} />
-        <Route path="/5" element={<LandingPageThree locationPropsMap={locationPropsMap} />} />
-        <Route path="*" element={<LandingPageThree locationPropsMap={locationPropsMap} />} />
+        <Route path="/5" element={<LandingPageFive locationPropsMap={locationPropsMap} />} />
+        <Route path="*" element={<LandingPageFive locationPropsMap={locationPropsMap} />} />
       </Routes>
     </Router>
   );

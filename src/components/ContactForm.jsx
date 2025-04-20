@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-function ContactForm({ offers, pageName="" }) {
+function ContactForm({ offers, pageName="" ,title=""}) {
   const gSheetUrl =
-    "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
+    // "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
+    "https://script.google.com/macros/s/AKfycbzpKzgsAavrZ83XWe0tb_5Oa6tzOngZ5Yq1SI6Guk3G3YXZPfbHYQO9dJXDEkBdc6rmhQ/exec";
 
   const [userName, setUserName] = useState("");
   const [userNumber, setUserNumber] = useState("");
@@ -62,7 +63,7 @@ function ContactForm({ offers, pageName="" }) {
     fetch(gSheetUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${userName}&Email=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}`,
+      body: `Name=${userName}&Phone=${userNumber}&Service=${selectedService}&Time=${new Date().toISOString()}&Location=${title}`,
     })
       .then((res) => res.text())
       .then(() => {

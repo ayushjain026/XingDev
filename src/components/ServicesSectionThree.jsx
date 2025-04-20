@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
-import discountTag from "../assets/discount-tag.svg";
-import NanoPlastia from "../assets/NanoPlastiaService.jpeg";
-import HairKeratin from "../assets/s5_1.jpg";
-import one from "../assets/serviceImages/11.jpeg";
-import two from "../assets/serviceImages/22.jpeg";
-import three from "../assets/serviceImages/33.jpeg";
-import four from "../assets/serviceImages/44.jpeg";
+import NanoPlastia from "../assets/NanoPlastia_5.jpeg";
+import HairKeratin from "../assets/HairKeratin_5.jpeg";
+import globalHairColour from "../assets/globalHairColour_5.jpeg";
+import hairHighlight_5 from "../assets/hairHighlight_5.jpeg";
+import hydraFacial_5 from "../assets/hydraFacial_5.jpeg";
+import haircut_5 from "../assets/haircut_5.jpeg";
 
-const images = [HairKeratin, NanoPlastia, one, two, three, four];
+const images = [HairKeratin, NanoPlastia, hairHighlight_5, globalHairColour, hydraFacial_5, haircut_5];
 
 const cardData = [
   {
@@ -15,8 +14,8 @@ const cardData = [
     question: "Weak, Damaged, Unmanaged Hair ?",
     description:
       "We got you covered ! Choose our Keratin Treatment at <b>50% OFF</b> which infuse Keratin in your hair for the natural shine and outstanding glow. ",
-    cutoutPrice: "Rs. 9999",
-    currentPrice: "Rs. 4999",
+    cutoutPrice: "Rs. 3999",
+    currentPrice: "Rs. 2999",
     imgUrl: "",
   },
   {
@@ -24,40 +23,40 @@ const cardData = [
     question: "Frizzy, Dull Hair, Tangled Hair <br />We got you covered !",
     description:
       "Nanplastia is one of the most advanced Hair treatment, which regular straightening manages your hair, Nanoplastia infuses protine and brings nearly 80% of the straightening effect. <br />Choose our Nanoplastia Treatment at <b>50% OFF</b> for straightening, shiny, Gorgeous hair.",
-    cutoutPrice: "Rs. 13999",
-    currentPrice: "Rs. 6999",
+    cutoutPrice: "Rs. 5999",
+    currentPrice: "Rs. 3999",
   },
   {
     heading: "",
     question:
       'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b>',
     description: "",
-    cutoutPrice: "₹ 9999",
-    currentPrice: "₹ 4499",
+    cutoutPrice: "₹ 3999",
+    currentPrice: "₹ 2899",
   },
   {
     heading: "",
     question:
       'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b>',
     description: "",
-    cutoutPrice: "₹ 7999",
-    currentPrice: "₹ 2999",
+    cutoutPrice: "₹ 3999",
+    currentPrice: "₹ 2499",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>CRAZY HAIR COLOR</b>',
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HYDRA FACIAL</b>',
     description: "",
-    cutoutPrice: "₹ 9999",
-    currentPrice: "₹ 4599",
+    cutoutPrice: "₹ 3999",
+    currentPrice: "₹ 2899",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR COLOR</b>',
+      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR CUT</b>',
     description: "",
-    cutoutPrice: "₹ 9999",
-    currentPrice: "₹ 4999",
+    cutoutPrice: "₹ 1000",
+    currentPrice: "₹ 899",
   },
 ];
 

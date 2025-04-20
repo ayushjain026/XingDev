@@ -48,7 +48,7 @@ const LandingPageOne = ({ locationPropsMap }) => {
       {/* Popup form logic */}
       {isOpen && (
         <div className="popup-container">
-          <ContactForm offers={offers} />
+          <ContactForm offers={offers} title={locationInfo.title} />
           <p className="popup-close" onClick={() => setIsOpen(false)}>X</p>
           <img src={logo} alt="logo" className="popup-logo" />
         </div>
