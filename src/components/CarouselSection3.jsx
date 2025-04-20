@@ -1,12 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
-import c1 from '../assets/ShopImages3/c1.png';
-import c2 from '../assets/ShopImages3/c2.png';
-import c3 from '../assets/ShopImages3/c3.png';
-import c4 from '../assets/ShopImages3/c4.png';
-import c5 from '../assets/ShopImages3/c5.png';
-import c6 from '../assets/ShopImages3/c6.png';
-import c7 from '../assets/ShopImages3/c7.png';
-import c8 from '../assets/ShopImages3/c8.png';
+import c1 from '../assets/ShopImages3/c1.jpeg';
+import c2 from '../assets/ShopImages3/c2.jpeg';
+import c3 from '../assets/ShopImages3/c3.jpeg';
+import c4 from '../assets/ShopImages3/c4.jpeg';
+import c5 from '../assets/ShopImages3/c5.jpeg';
+import c6 from '../assets/ShopImages3/c6.jpeg';
+import c7 from '../assets/ShopImages3/c7.jpeg';
+import c8 from '../assets/ShopImages3/c8.jpeg';
+import c9 from '../assets/ShopImages3/c9.jpeg';
+import c10 from '../assets/ShopImages3/c10.jpeg';
+import c11 from '../assets/ShopImages3/c9.jpeg';
+import c12 from '../assets/ShopImages3/c10.jpeg';
 
 function CarouselSection3() {
   const images = [
@@ -17,7 +21,11 @@ function CarouselSection3() {
     c5,
     c6,
     c7,
-    c8
+    c8,
+    c9,
+    c10,
+    c11,
+    c12
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

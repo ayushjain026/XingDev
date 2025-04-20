@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import logo from '../assets/nlogo.png';
 
 function Footer5({ locationInfo }) {
   const scrollToSection = (id) => {
@@ -31,14 +31,14 @@ function Footer5({ locationInfo }) {
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Socials</h2>
-            <a href="https://www.instagram.com/xingpremiumsalons" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Instagram</a>
-            <a href="https://www.facebook.com/people/XING-Salon-Nails-and-Tattoo/100089547421311/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Facebook</a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B917996666012&text=I+want+to+avail+hair+offer" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">WhatsApp</a>
+            <a href="https://www.instagram.com/salon.expresscuts/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Instagram</a>
+            <a href="https://www.facebook.com/p/Express-Cuts-61556432902330/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Facebook</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B918970000135&text=I+want+to+avail+hair+offer" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">WhatsApp</a>
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Contact</h2>
-            <a href={`mailto:${locationInfo?.email}`} className="footer-links-group-link">{locationInfo?.email}</a>
-            <a href={`tel:+91${locationInfo?.phoneNumber}`} className="footer-links-group-link">+91 08970000135</a>
+            {/* <a href={`mailto:${locationInfo?.email}`} className="footer-links-group-link">{locationInfo?.email}</a> */}
+            <a href={`tel:+9189700 00135`} className="footer-links-group-link">+91 89700 00135</a>
           </div>
         </div>
       </section>

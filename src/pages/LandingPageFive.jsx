@@ -18,6 +18,7 @@ import ReviewsSectionThree from "../components/ReviewsSectionThree";
 import QnaSectionThree from "../components/QnaSectionThree";
 import Navbar5 from "../components/Navbar5";
 import ContactSection5 from "../components/ContactSection5";
+import Footer5 from "../components/Footer5";
 
 function LandingPageFive({locationPropsMap}) {
   const [showModal, setShowModal] = useState(false);
@@ -55,7 +56,7 @@ function LandingPageFive({locationPropsMap}) {
       <QnaSectionThree />
       
       {dynamicProps && <ContactSection5 locationInfo={dynamicProps} offers={offers} pageName="Elevate Your Look with Premium Shades" />}
-      {dynamicProps && <Footer locationInfo={dynamicProps} />}
+      {dynamicProps && <Footer5 locationInfo={dynamicProps} />}
 
       {/* Popup form logic */}
       {isOpen && (
