@@ -11,52 +11,46 @@ const images = [HairKeratin, NanoPlastia, hairHighlight_5, globalHairColour, hyd
 const cardData = [
   {
     heading: "Keratin Hair Treatment",
-    question: "Weak, Damaged, Unmanaged Hair ?",
-    description:
-      "We got you covered ! Choose our Keratin Treatment at <b>50% OFF</b> which infuse Keratin in your hair for the natural shine and outstanding glow. ",
+    question:
+      "Weak, damaged hair? Try our Keratin Treatment at <b>50% OFF</b> for natural shine and glow. <b>Limited Time Offer!</b>",
     cutoutPrice: "Rs. 3999",
     currentPrice: "Rs. 2999",
     imgUrl: "",
   },
   {
     heading: "Nanoplastia",
-    question: "Frizzy, Dull Hair, Tangled Hair <br />We got you covered !",
-    description:
-      "Nanplastia is one of the most advanced Hair treatment, which regular straightening manages your hair, Nanoplastia infuses protine and brings nearly 80% of the straightening effect. <br />Choose our Nanoplastia Treatment at <b>50% OFF</b> for straightening, shiny, Gorgeous hair.",
+    question:
+      "Frizzy, dull hair? Nanoplastia offers advanced hair treatment with 80% straightening effect. <b>50% OFF</b>. <b>Book Now!</b>",
     cutoutPrice: "Rs. 5999",
     currentPrice: "Rs. 3999",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b>',
-    description: "",
+      '<b>Upto 50% Off</b>: <b>HAIR HIGHLIGHTS</b><br />Add depth and vibrance to your hair. <b>Don’t Miss Out!</b>',
     cutoutPrice: "₹ 3999",
     currentPrice: "₹ 2899",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b>',
-    description: "",
+      '<b>Upto 50% Off</b>: <b>GLOBAL HAIR COLOR</b><br />Get a stunning, uniform hair color. <b>Hurry, Offer Ends Soon!</b>',
     cutoutPrice: "₹ 3999",
     currentPrice: "₹ 2499",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HYDRA FACIAL</b>',
-    description: "",
+      '<b>Upto 50% Off</b>: <b>HYDRA FACIAL</b><br />Deeply cleanse and hydrate your skin for a radiant glow. <b>Glow Like Never Before!</b>',
     cutoutPrice: "₹ 3999",
     currentPrice: "₹ 2899",
   },
   {
     heading: "",
     question:
-      'Get <b style="font-size: 20px; color: #F63194; padding: 5px;">Upto 50% Off</b>: <b>HAIR CUT</b>',
-    description: "",
-    cutoutPrice: "₹ 1000",
-    currentPrice: "₹ 899",
+      '<b>Upto 50% Off</b>: <b>HAIR CUT</b><br />Refresh your style with a professional haircut. <b>Style Redefined!</b>',
+    cutoutPrice: "₹ 999",
+    currentPrice: "₹ 599",
   },
 ];
 

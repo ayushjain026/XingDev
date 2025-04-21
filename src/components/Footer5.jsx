@@ -37,7 +37,7 @@ function Footer5({ locationInfo }) {
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Contact</h2>
-            {/* <a href={`mailto:${locationInfo?.email}`} className="footer-links-group-link">{locationInfo?.email}</a> */}
+            <a href={`mailto:salon.expresscuts@gmail.com`} className="footer-links-group-link">salon.expresscuts@gmail.com</a>
             <a href={`tel:+9189700 00135`} className="footer-links-group-link">+91 89700 00135</a>
           </div>
         </div>

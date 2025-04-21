@@ -21,7 +21,7 @@ const LandingPageOne = ({ locationPropsMap }) => {
   // Get query parameters from the URL
   const getLocation = useLocation();
   const queryParams = new URLSearchParams(getLocation.search);
-  const location = queryParams.get("location");
+  const location = queryParams.get("location") || "sarjapura"; 
 
   // Set a default location if `location` is missing
   const defaultLocation = "sarjapura"; // Change to any default

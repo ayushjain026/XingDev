@@ -1,9 +1,3 @@
-import Navbar from "../components/Navbar";
-import HeroSectionTwo from "../components/HeroSectionTwo";
-import ServicesSectionTwo from "../components/ServicesSectionTwo";
-import ReviewsSectionTwo from "../components/ReviewsSectionTwo";
-import QnaSectionTwo from "../components/QnaSectionTwo";
-import Footer from "../components/Footer";
 import { useState } from "react";
 import PopupFormModal from "../components/PopupFormModule";
 import ContactForm from "../components/ContactForm";
@@ -28,7 +22,7 @@ function LandingPageFive({locationPropsMap}) {
   // Get query parameters from the URL
   const getLocation = useLocation();
   const queryParams = new URLSearchParams(getLocation.search);
-  const location = queryParams.get("location");
+  const location = queryParams.get("location") || "Priyadarshini Layout";
 
   // Define location-specific props
 
