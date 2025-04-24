@@ -106,6 +106,13 @@ function ServiceCard({
   imgUrl,
   setIsOpen,
 }) {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div className="services-cards-card">
       <div
@@ -151,7 +158,7 @@ function ServiceCard({
           {actualPrice}
         </p>
 
-        <button className="hero-cta" onClick={() => setIsOpen(true)}>
+        <button className="hero-cta" onClick={() => scrollToSection("contact-section")}>
           Avail this Offer Now
         </button>
       </div>

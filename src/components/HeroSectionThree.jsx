@@ -22,7 +22,7 @@ function HeroSectionThree({ locationInfo }) {
       <div className="hero-content-container">
         <div className="hero-content">
           <h1 className="hero-heading">
-            {locationInfo?.title} Premier Hair Color & Treatment Destination
+            {locationInfo?.title} Premium Hair Color & Treatment Destination
           </h1>
           <div className="hero-ctas">
             <a

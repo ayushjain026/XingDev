@@ -52,7 +52,7 @@ function LandingPageTwo({locationPropsMap}) {
       {/* Popup form logic */}
       {isOpen && (
         <div className="popup-container">
-          <ContactForm offers={offers} title={locationInfo.title}/>
+          <ContactForm offers={offers} title={dynamicProps?.title}/>
           <p
             className="popup-close"
             onClick={() => {

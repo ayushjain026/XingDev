@@ -27,11 +27,11 @@ function Footer5({ locationInfo }) {
             <a onClick={() => scrollToSection("services-section")} className="footer-links-group-link">Services</a>
             <a onClick={() => scrollToSection("review-section")} className="footer-links-group-link">Reviews</a>
             <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Contact</a>
-            <a onClick={() => scrollToSection("location-section")} className="footer-links-group-link">Location</a>
+            <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Location</a>
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Socials</h2>
-            <a href="https://www.instagram.com/salon.expresscuts/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Instagram</a>
+            <a href="https://www.instagram.com/expresscuts.salons/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Instagram</a>
             <a href="https://www.facebook.com/p/Express-Cuts-61556432902330/" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">Facebook</a>
             <a href="https://api.whatsapp.com/send/?phone=%2B918970000135&text=I+want+to+avail+hair+offer" target="_blank" rel="noopener noreferrer" className="footer-links-group-link">WhatsApp</a>
           </div>

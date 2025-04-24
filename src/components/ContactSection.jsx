@@ -2,7 +2,7 @@ import ContactForm from "./ContactForm";
 
 function ContactSection({locationInfo, offers, pageName=""}) {
   return (
-    <section id="contact section" className="contact section">
+    <section id="contact-section" className="contact section">
       <div className="contact-map">
         <div className="contact-location">
           <div className="location-icon" style={{ fontSize: "30px" }}>
@@ -34,7 +34,7 @@ function ContactSection({locationInfo, offers, pageName=""}) {
           />
         </div>
       </div>
-      <ContactForm offers={offers} pageName={pageName} title={locationInfo.title} />
+      <ContactForm offers={offers} pageName={pageName} title={locationInfo?.title} />
     </section>
   );
 }
