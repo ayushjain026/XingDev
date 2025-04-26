@@ -26,7 +26,7 @@ function Footer5({ locationInfo }) {
             <h2 className="footer-links-group-heading">Quick Links</h2>
             <a onClick={() => scrollToSection("services-section")} className="footer-links-group-link">Services</a>
             <a onClick={() => scrollToSection("review-section")} className="footer-links-group-link">Reviews</a>
-            <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Contact</a>
+            <a onClick={() => scrollToSection("personalized-treatment")} className="footer-links-group-link">Contact</a>
             <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Location</a>
           </div>
           <div className="footer-links-group">

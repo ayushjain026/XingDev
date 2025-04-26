@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 function ContactForm({ offers, pageName="" ,title=""}) {
   const gSheetUrl =
     // "https://script.google.com/macros/s/AKfycbycozoWrMd2qlqlBtmGddluTPmFDbMh3v14mn9BwNLXG8j9oKCBZs1Ykzfbluvn92W88Q/exec";
-    "https://script.google.com/macros/s/AKfycbzpKzgsAavrZ83XWe0tb_5Oa6tzOngZ5Yq1SI6Guk3G3YXZPfbHYQO9dJXDEkBdc6rmhQ/exec";
+      "https://script.google.com/macros/s/AKfycbzNahIv22m1AZm2OdDQwYaWbERwQ-9o3GhK9w9BRMrHu413Yb4BsTPDJO5KYB0iufajIw/exec";
 
   const [userName, setUserName] = useState("");
   const [userNumber, setUserNumber] = useState("");

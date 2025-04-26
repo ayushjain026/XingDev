@@ -21,14 +21,14 @@ function Footer({ locationInfo }) {
             <h2 className="footer-links-group-heading">Quick Links</h2>
             <a onClick={() => scrollToSection("services-section")} className="footer-links-group-link">Services</a>
             <a onClick={() => scrollToSection("review-section")} className="footer-links-group-link">Reviews</a>
-            <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Contact</a>
+            <a onClick={() => scrollToSection("personalized-treatment")} className="footer-links-group-link">Contact</a>
             <a onClick={() => scrollToSection("contact-section")} className="footer-links-group-link">Location</a>
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Socials</h2>
             <a href="https://www.instagram.com/xingpremiumsalons" className="footer-links-group-link">Instagram</a>
             <a href="https://www.facebook.com/people/XING-Salon-Nails-and-Tattoo/100089547421311/" className="footer-links-group-link">Facebook</a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B917996666012&text=I+want+to+avail+hair+offer" className="footer-links-group-link">WhatsApp</a>
+            <a href={`https://api.whatsapp.com/send/?phone=%2B91${locationInfo?.phoneNumber}&text=I+want+to+avail+hair+offer`} className="footer-links-group-link">WhatsApp</a>
           </div>
           <div className="footer-links-group">
             <h2 className="footer-links-group-heading">Contact</h2>
