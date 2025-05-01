@@ -8,7 +8,7 @@ import r6 from "../assets/reviews/PageOne/r6.jpeg";
 import r7 from "../assets/reviews/PageOne/r7.jpeg";
 const images = [r1, r2, r3, r4, r5, r6, r7]; 
 
-const ReviewsSectionOne = () => {
+const ReviewsSectionOne = ({locationInfo}) => {
   return (
     <section id="review-section" className="reviews">
       <div className="reviews-stats">
@@ -38,7 +38,7 @@ const ReviewsSectionOne = () => {
       </div>
       <div className="help">
         <a
-          href="https://www.google.com/search?q=hrs+xing+saloon+banglore&rlz=1C1RXQR_enIN978IN978&oq=hrs+xing+saloon+banglore&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARAjGCcyBggCEEUYQDIGCAMQIxgnMgoIBBAAGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAE0gEINzE1NGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8#lrd=0x3bae1309406c2c01:0x2eb6dc1b4d71e4b3,3,,,,"
+          href={locationInfo?.reviewUrl}
           className="reviews-cta"
         >
           Write A Review

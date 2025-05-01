@@ -178,7 +178,7 @@ function ServiceCard({
           {actualPrice}
         </p>
 
-        <button className="hero-cta" onClick={() => scrollToSection("contact-section")}>
+        <button className="hero-cta" onClick={() => scrollToSection("personalized-treatment")}>
           Avail this Offer Now
         </button>
       </div>

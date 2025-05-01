@@ -38,7 +38,7 @@ const LandingPageOne = ({ locationPropsMap }) => {
       <HeroSection locationInfo={dynamicProps} />
       <ServicesSection setIsOpen={setIsOpen} />
       <CarouselSection1 />
-      <ReviewsSectionOne />
+      <ReviewsSectionOne locationInfo={dynamicProps}/>
       <QnaSection />
 
       {/* Render Contact & Footer only when dynamicProps exists */}

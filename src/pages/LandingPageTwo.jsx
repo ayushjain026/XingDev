@@ -20,7 +20,7 @@ function LandingPageTwo({locationPropsMap}) {
   // Get query parameters from the URL
   const getLocation = useLocation();
   const queryParams = new URLSearchParams(getLocation.search);
-  const location = queryParams.get("location");
+  const location = queryParams.get("location") || "sarjapura"; ;
 
   // Define location-specific props
 
@@ -43,7 +43,7 @@ function LandingPageTwo({locationPropsMap}) {
       <HeroSectionTwo locationInfo={dynamicProps} />
       <ServicesSectionTwo setIsOpen={setIsOpen} />
       <CarouselSection2 />
-      <ReviewsSectionTwo />
+      <ReviewsSectionTwo locationInfo={dynamicProps}/>
       <QnaSectionTwo />
       
       {dynamicProps && <ContactSection locationInfo={dynamicProps} offers={offers} pageName="Customize Your Perfect Hair Color" />}

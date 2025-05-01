@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Add useEffect import
 import imagezero from '../assets/ShopImages1/0.jpg';
 import imageOne from '../assets/ShopImages1/1.jpg';
 import imageTwo from '../assets/ShopImages1/2.jpg';
@@ -36,6 +36,16 @@ function CarouselSection1() {
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
+
+  // Add useEffect for auto-sliding
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000); // Changes image every 3 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array means this runs once on mount
 
   return (
     <section className="unique-carousel">

@@ -46,7 +46,7 @@ function LandingPageFive({locationPropsMap}) {
       <HeroSectionThree locationInfo={dynamicProps} />
       <ServicesSectionThree setIsOpen={setIsOpen} />
       <CarouselSection3 />
-      <ReviewsSectionThree />
+      <ReviewsSectionThree locationInfo={dynamicProps}/>
       <QnaSectionThree />
       
       {dynamicProps && <ContactSection5 locationInfo={dynamicProps} offers={offers} pageName="Elevate Your Look with Premium Shades" />}
